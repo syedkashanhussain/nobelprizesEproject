@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Nobel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="faqs.html">
+    <link rel="stylesheet" href="sitemap.html">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel';
+        }
+
+        .navbar {
+            padding: 1px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar-brand img {
+            height: 100px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .navbar-nav .nav-link i:hover {
+            color: #ffc107;
+            transition: 0.3s;
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-5px) scale(1.05);
+            }
+
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+        }
+
+        .animated-logo {
+            height: 80px;
+            animation: floatLogo 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .nav-link.active {
+            color: #ffc107 !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar .nav-link:focus,
+        .navbar .nav-link:visited {
+            color: #ffffff;
+        }
+
+        .container h2 {
+            margin-top: 150px;
+        }
+
+        .nobel-footer {
+            background-color: #1c1c1c;
+        }
+
+        .nobel-footer a:hover {
+            color: #ffc107 !important;
+            text-decoration: underline;
+        }
+
+        .nobel-footer i {
+            margin-right: 8px;
+        }
+
+        .nobel-footer i:hover {
+            color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="logo/logo.png" alt="Logo" class="animated-logo">
+                Nobel Prize Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqs.html" target="_blank">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sitemap.html" target="_blank">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact us.html" target="_blank">Contact Us</a></li>
+
+
+                    <!-- Icons -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-bell-fill fs-5"
+                                title="Notifications"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-person-circle fs-5"
+                                title="Login / Account"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-question-circle fs-5"
+                                title="Help"></i></a>
+                    </li>
+                </ul>
+                <!-- Search bar -->
+                <form class="d-flex ms-3" role="search" style="max-width: 300px; width: 100%;">
+                    <input class="form-control" type="search" placeholder="Search..." aria-label="Search"
+                        style="border-radius: 20px 0 0 20px; padding: 10px 15px; font-size: 16px; border: 2px solid #ffc107;">
+                    <button class="btn btn-outline-dark bg-warning" type="submit"
+                        style="border-radius: 0 20px 20px 0; padding: 10px 20px; font-weight: bold; border: 2px solid #ffc107; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#e0a800'; this.style.color='#fff';"
+                        onmouseout="this.style.backgroundColor='#ffc107'; this.style.color='#000';">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- list section -->
+    <div class="container" style="margin: 100px;">
+        <u>
+            <h2 class="text-center fw-bold bg-light">Nobel Prize Winners (1901-2025)</h2>
+        </u>
+
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th>Year</th>
+                    <th>Winner(s)</th>
+                    <th>Country</th>
+                    <th>Contribution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1901</td>
+                    <td>Jacobus Henricus van 't Hoff</td>
+                    <td>Netherlands</td>
+                    <td> For his demonstration of the existence of colloid solutions.</td>
+                </tr>
+                <tr>
+                    <td>1902</td>
+                    <td>Hermann Emil Fischer</td>
+                    <td>Germany</td>
+                    <td>For his work on sugar and purine syntheses.</td>
+                </tr>
+                <tr>
+                    <td>1903</td>
+                    <td>Svante Arrhenius</td>
+                    <td>Sweden</td>
+                    <td>For his electrolytic theory of dissociation.</td>
+                </tr>
+                <tr>
+                    <td>1904</td>
+                    <td>Sir William Ramsay</td>
+                    <td>United Kingdom</td>
+                    <td>For his discovery of the inert gases in air.</td>
+                </tr>
+                <tr>
+                    <td>1905</td>
+                    <td>Adolf Windaus</td>
+                    <td>Germany</td>
+                    <td>For his work on sterols and their connection to vitamins.</td>
+                </tr>
+                <tr>
+                    <td>1906</td>
+                    <td>Henri Moissan</td>
+                    <td>France</td>
+                    <td>For the isolation of fluorine from its compounds.</td>
+                </tr>
+                <tr>
+                    <td>1907</td>
+                    <td>Eduard Buchner</td>
+                    <td>Germany</td>
+                    <td>For his work on fermentation and enzymes.</td>
+                </tr>
+                <tr>
+                    <td>1908</td>
+                    <td>Fritz Haber</td>
+                    <td>Germany</td>
+                    <td>For his invention of the Haber process for ammonia synthesis.</td>
+                </tr>
+                <tr>
+                    <td>1909</td>
+                    <td>Wilhelm Ostwald</td>
+                    <td>Germany</td>
+                    <td>For his work on catalysis and equilibria in chemical reactions.</td>
+                </tr>
+                <tr>
+                    <td>1910</td>
+                    <td>Otto Wallach</td>
+                    <td>Germany</td>
+                    <td>For his work on the structure and reactions of organic compounds.</td>
+                </tr>
+                <tr>
+                    <td>1911</td>
+                    <td>Marie Curie</td>
+                    <td>Poland/France</td>
+                    <td>For her discovery of radium and polonium.</td>
+                </tr>
+                <tr>
+                    <td>1912</td>
+                    <td>Paul Sabatier, Jean-Baptiste Senderens</td>
+                    <td>France</td>
+                    <td>For their work on catalysis.</td>
+                </tr>
+                <tr>
+                    <td>1913</td>
+                    <td>Alfred Werner</td>
+                    <td>Switzerland</td>
+                    <td>For his work on the theory of coordination compounds.</td>
+                </tr>
+                <tr>
+                    <td>1914</td>
+                    <td>Theodore William Richards</td>
+                    <td>USA</td>
+                    <td>For his determination of atomic weights.</td>
+                </tr>
+                <tr>
+                    <td>1915</td>
+                    <td>Richard Zsigmondy</td>
+                    <td>Germany</td>
+                    <td>For his demonstration of the existence of colloid solutions.</td>
+                </tr>
+                <tr>
+                    <td>1916</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1917</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1918</td>
+                    <td>Fritz Pregl</td>
+                    <td>Austria</td>
+                    <td>For his development of microanalysis in organic chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1919</td>
+                    <td>Theodor Svedberg</td>
+                    <td>Sweden</td>
+                    <td>For his work on the ultracentrifuge and the measurement of molecular sizes.</td>
+                </tr>
+                <tr>
+                    <td>1920</td>
+                    <td>Walther Nernst</td>
+                    <td>Germany</td>
+                    <td>For his theory of affinity and chemical equilibria.</td>
+                </tr>
+                <tr>
+                    <td>1921</td>
+                    <td>Frederick Soddy</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on isotopes and the theory of atomic disintegration.</td>
+                </tr>
+                <tr>
+                    <td>1922</td>
+                    <td>Francis W. Aston</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the isotope of atoms.</td>
+                </tr>
+                <tr>
+                    <td>1923</td>
+                    <td>Fritz Haber</td>
+                    <td>Germany</td>
+                    <td>For his work on the chemical processes of agriculture.</td>
+                </tr>
+                <tr>
+                    <td>1924</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1925</td>
+                    <td>Richard Zsigmondy</td>
+                    <td>Germany</td>
+                    <td>For his work on colloid chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1926</td>
+                    <td>Theodor W. Richards</td>
+                    <td>USA</td>
+                    <td>For his determination of the atomic weights of the elements.</td>
+                </tr>
+                <tr>
+                    <td>1927</td>
+                    <td>Wilhelm Schlenk</td>
+                    <td>Germany</td>
+                    <td>For his research in the field of organic chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1928</td>
+                    <td>Jacobus Henricus van 't Hoff</td>
+                    <td>Netherlands</td>
+                    <td>For his work on chemical equilibrium and osmotic pressure.</td>
+                </tr>
+                <tr>
+                    <td>1929</td>
+                    <td>Adolf Windaus</td>
+                    <td>Germany</td>
+                    <td>For his work on sterols and their connection to vitamins.</td>
+                </tr>
+                <tr>
+                    <td>1930</td>
+                    <td>Carl Bosch, Friedrich Bergius</td>
+                    <td>Germany</td>
+                    <td>For their contributions to the development of chemical processes.</td>
+                </tr>
+                <tr>
+                    <td>1931</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1932</td>
+                    <td>Irving Langmuir</td>
+                    <td>USA</td>
+                    <td>For his discoveries and development of surface chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1933</td>
+                    <td>Otto Hahn</td>
+                    <td>Germany</td>
+                    <td>For his discovery of nuclear fission.</td>
+                </tr>
+                <tr>
+                    <td>1934</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1935</td>
+                    <td>Richard Zsigmondy</td>
+                    <td>Germany</td>
+                    <td>For his work on colloid chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1936</td>
+                    <td>Peter Debye</td>
+                    <td>Germany</td>
+                    <td>For his work on molecular structure and dipole moments.</td>
+                </tr>
+                <tr>
+                    <td>1937</td>
+                    <td>Robert Robinson</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure and synthesis of natural products.</td>
+                </tr>
+                <tr>
+                    <td>1938</td>
+                    <td>Richard Kuhn</td>
+                    <td>Germany</td>
+                    <td>For his work on carotenoids and vitamins.</td>
+                </tr>
+                <tr>
+                    <td>1939</td>
+                    <td>Adolf Windaus</td>
+                    <td>Germany</td>
+                    <td>For his work on sterols and their connection to vitamins.</td>
+                </tr>
+                <tr>
+                    <td>1940</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1941</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1942</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1943</td>
+                    <td>George Charles de Hevesy</td>
+                    <td>Hungary</td>
+                    <td>For his work on radioactive tracers.</td>
+                </tr>
+                <tr>
+                    <td>1944</td>
+                    <td>Otto Hahn</td>
+                    <td>Germany</td>
+                    <td>For his discovery of nuclear fission.</td>
+                </tr>
+                <tr>
+                    <td>1945</td>
+                    <td>Arne Magnus</td>
+                    <td>Norway</td>
+                    <td>For his work on organic chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1946</td>
+                    <td>Sir Robert Robinson</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure and synthesis of natural products.</td>
+                </tr>
+                <tr>
+                    <td>1947</td>
+                    <td>George Charles de Hevesy</td>
+                    <td>Hungary</td>
+                    <td>For his work on radioactive tracers.</td>
+                </tr>
+                <tr>
+                    <td>1948</td>
+                    <td>Richard Kuhn</td>
+                    <td>Germany</td>
+                    <td>For his work on carotenoids and vitamins.</td>
+                </tr>
+                <tr>
+                    <td>1949</td>
+                    <td>Dorothy Crowfoot Hodgkin</td>
+                    <td>United Kingdom</td>
+                    <td>For her work on the structure of important biochemical substances by X-ray crystallography.</td>
+                </tr>
+                <tr>
+                    <td>1950</td>
+                    <td>Otto Hahn</td>
+                    <td>Germany</td>
+                    <td>For his work on nuclear fission.</td>
+                </tr>
+
+                <tr>
+                    <td>1951</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                    <td>Not Awarded</td>
+                </tr>
+                <tr>
+                    <td>1952</td>
+                    <td>Linus Pauling</td>
+                    <td>USA</td>
+                    <td>For his research into the nature of the chemical bond and its application to the elucidation of
+                        the structure of complex substances.</td>
+                </tr>
+                <tr>
+                    <td>1953</td>
+                    <td>Hermann Staudinger</td>
+                    <td>Germany</td>
+                    <td>For his discoveries in the field of macromolecular chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1954</td>
+                    <td>Alexander Todd</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure of nucleotides and their relation to nucleic acids.</td>
+                </tr>
+                <tr>
+                    <td>1955</td>
+                    <td>Vincent du Vigneaud</td>
+                    <td>USA</td>
+                    <td>For his work on biochemistry, especially in the field of sulfur-containing compounds.</td>
+                </tr>
+                <tr>
+                    <td>1956</td>
+                    <td>Sir Cyril Norman Hinshelwood, Nikolay Semenov</td>
+                    <td>United Kingdom, Soviet Union</td>
+                    <td>For their work on the mechanism of chemical reactions.</td>
+                </tr>
+                <tr>
+                    <td>1957</td>
+                    <td>Lord Alexander Todd</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure of nucleotides and their relation to nucleic acids.</td>
+                </tr>
+                <tr>
+                    <td>1958</td>
+                    <td>Frederick Sanger</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure of proteins and nucleic acids.</td>
+                </tr>
+                <tr>
+                    <td>1959</td>
+                    <td>Jaroslav Heyrovský</td>
+                    <td>Czechoslovakia</td>
+                    <td>For his discovery and development of polarography.</td>
+                </tr>
+                <tr>
+                    <td>1960</td>
+                    <td>Sir Robert Robinson</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure and synthesis of natural products.</td>
+                </tr>
+                <tr>
+                    <td>1961</td>
+                    <td>Melvin Calvin</td>
+                    <td>USA</td>
+                    <td>For his research on the mechanism of photosynthesis.</td>
+                </tr>
+                <tr>
+                    <td>1962</td>
+                    <td>Max Perutz, John Kendrew</td>
+                    <td>United Kingdom</td>
+                    <td>For their work on the structure of hemoglobin and myoglobin.</td>
+                </tr>
+                <tr>
+                    <td>1963</td>
+                    <td>Galen M. Knight</td>
+                    <td>USA</td>
+                    <td>For his work in the field of organic chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1964</td>
+                    <td>Robert B. Woodward</td>
+                    <td>USA</td>
+                    <td>For his work in the field of organic chemistry, particularly on the structure of natural
+                        substances.</td>
+                </tr>
+                <tr>
+                    <td>1965</td>
+                    <td>Roderick M. Macfarlane</td>
+                    <td>USA</td>
+                    <td>For his work in physical chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1966</td>
+                    <td>Robert W. Holley</td>
+                    <td>USA</td>
+                    <td>For his work on the structure of the RNA molecule.</td>
+                </tr>
+                <tr>
+                    <td>1967</td>
+                    <td>George Wald</td>
+                    <td>USA</td>
+                    <td>For his discoveries in the field of biochemistry, particularly with respect to vision.</td>
+                </tr>
+                <tr>
+                    <td>1968</td>
+                    <td>Robert W. Holley, Har Gobind Khorana, Marshall W. Nirenberg</td>
+                    <td>USA</td>
+                    <td>For their work on the structure of RNA and its relationship to protein synthesis.</td>
+                </tr>
+                <tr>
+                    <td>1969</td>
+                    <td>Peter D. Mitchell</td>
+                    <td>United Kingdom</td>
+                    <td>For his contributions to the understanding of the electron transport chain and its role in
+                        cellular respiration.</td>
+                </tr>
+                <tr>
+                    <td>1970</td>
+                    <td>Sir Bernard L. Feringa</td>
+                    <td>Netherlands</td>
+                    <td>For his work on the molecular machines of the cell.</td>
+                </tr>
+                <tr>
+                    <td>1971</td>
+                    <td>Glenn T. Seaborg</td>
+                    <td>USA</td>
+                    <td>For his discovery of transuranium elements and his contributions to the development of nuclear
+                        chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1972</td>
+                    <td>John B. Goodenough</td>
+                    <td>USA</td>
+                    <td>For his work on the development of rechargeable lithium-ion batteries.</td>
+                </tr>
+                <tr>
+                    <td>1973</td>
+                    <td>Peter D. Mitchell</td>
+                    <td>United Kingdom</td>
+                    <td>For his research in bioenergetics, especially in the area of ATP synthesis.</td>
+                </tr>
+                <tr>
+                    <td>1974</td>
+                    <td>George P. Smith, Sir Richard R. Dawkins</td>
+                    <td>USA</td>
+                    <td>For their groundbreaking research in molecular biology.</td>
+                </tr>
+                <tr>
+                    <td>1975</td>
+                    <td>Howard Temin, David Baltimore</td>
+                    <td>USA</td>
+                    <td>For their discovery of reverse transcription in retroviruses.</td>
+                </tr>
+                <tr>
+                    <td>1976</td>
+                    <td>Stanley B. Prusiner</td>
+                    <td>USA</td>
+                    <td>For his discovery of prions, a new class of infectious proteins.</td>
+                </tr>
+                <tr>
+                    <td>1977</td>
+                    <td>Paul D. Boyer, John E. Walker</td>
+                    <td>USA, United Kingdom</td>
+                    <td>For their work on the ATP synthase enzyme and the mechanism of ATP production in the cell.</td>
+                </tr>
+                <tr>
+                    <td>1978</td>
+                    <td>Albert A. Michelson</td>
+                    <td>USA</td>
+                    <td>For his precision optical instruments and their contributions to the study of light.</td>
+                </tr>
+                <tr>
+                    <td>1979</td>
+                    <td>Herbert C. Brown</td>
+                    <td>USA</td>
+                    <td>For his work on organoboranes and their applications in organic synthesis.</td>
+                </tr>
+                <tr>
+                    <td>1980</td>
+                    <td>Paul Berg, Walter Gilbert, Frederick Sanger</td>
+                    <td>USA, United Kingdom</td>
+                    <td>For their discoveries in molecular biology, particularly the development of DNA sequencing
+                        techniques.</td>
+                </tr>
+
+                <tr>
+                    <td>1981</td>
+                    <td>Kenichi Fukui, Roald Hoffmann</td>
+                    <td>Japan, USA</td>
+                    <td>For their theories, based on the concept of reaction paths, on the course of chemical reactions.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1982</td>
+                    <td>Aaron Klug</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure of biological macromolecules.</td>
+                </tr>
+                <tr>
+                    <td>1983</td>
+                    <td>Henry Taube</td>
+                    <td>Canada/USA</td>
+                    <td>For his work on the mechanisms of electron transfer reactions, particularly in metal complexes.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>Robert F. Curl Jr., Sir Harold W. Kroto, Richard E. Smalley</td>
+                    <td>USA, United Kingdom</td>
+                    <td>For their discovery of fullerenes.</td>
+                </tr>
+                <tr>
+                    <td>1985</td>
+                    <td>Herbert A. Hauptman, Jerome Karle</td>
+                    <td>USA</td>
+                    <td>For their work on the methods of determining the structures of molecules through X-ray
+                        crystallography.</td>
+                </tr>
+                <tr>
+                    <td>1986</td>
+                    <td>Charles J. Pedersen, Donald J. Cram</td>
+                    <td>USA</td>
+                    <td>For their work on the development of molecules that could interact specifically with other
+                        molecules (molecular machines).</td>
+                </tr>
+                <tr>
+                    <td>1987</td>
+                    <td>Jean-Marie Gustave Le Clézio</td>
+                    <td>France</td>
+                    <td>For his work on the synthesis of organic compounds in biological processes.</td>
+                </tr>
+                <tr>
+                    <td>1988</td>
+                    <td>Johann Deisenhofer, Robert Huber, Hartmut Michel</td>
+                    <td>Germany</td>
+                    <td>For their work on the structure of proteins involved in photosynthesis.</td>
+                </tr>
+                <tr>
+                    <td>1989</td>
+                    <td>Sidney Altman, Thomas Cech</td>
+                    <td>USA</td>
+                    <td>For their work on the catalytic properties of RNA.</td>
+                </tr>
+                <tr>
+                    <td>1990</td>
+                    <td>Elias James Corey</td>
+                    <td>USA</td>
+                    <td>For his development of the theory of organic synthesis.</td>
+                </tr>
+                <tr>
+                    <td>1991</td>
+                    <td>Richard R. Schrock, Robert H. Grubbs, Yves Chauvin</td>
+                    <td>USA, France</td>
+                    <td>For their work on the development of metathesis reactions in organic chemistry.</td>
+                </tr>
+                <tr>
+                    <td>1992</td>
+                    <td>Rudolph A. Marcus</td>
+                    <td>Canada/USA</td>
+                    <td>For his work on the theory of electron transfer reactions in chemical systems.</td>
+                </tr>
+                <tr>
+                    <td>1993</td>
+                    <td>Kary B. Mullis, Michael Smith</td>
+                    <td>USA, Canada</td>
+                    <td>For their contributions to the development of techniques in molecular biology, including PCR
+                        (Polymerase Chain Reaction) and site-directed mutagenesis.</td>
+                </tr>
+                <tr>
+                    <td>1994</td>
+                    <td>George P. Smith, Sir Richard Roberts, Elizabeth H. Blackburn</td>
+                    <td>USA, UK, USA</td>
+                    <td>For their work on the discovery of the structure of telomeres and its role in cell biology.</td>
+                </tr>
+                <tr>
+                    <td>1995</td>
+                    <td>Paul D. Boyer, John E. Walker, Jens C. Skou</td>
+                    <td>USA, UK, Denmark</td>
+                    <td>For their discoveries concerning the mechanism of ATP synthesis in the cell.</td>
+                </tr>
+                <tr>
+                    <td>1996</td>
+                    <td>Robert F. Furchgott, Louis J. Ignarro, Ferid Murad</td>
+                    <td>USA</td>
+                    <td>For their discoveries concerning the signaling role of nitric oxide in the cardiovascular
+                        system.</td>
+                </tr>
+                <tr>
+                    <td>1997</td>
+                    <td>Paul D. Boyer, John E. Walker, Jens C. Skou</td>
+                    <td>USA, UK, Denmark</td>
+                    <td>For their work on the enzymatic synthesis of ATP and its significance in cell metabolism.</td>
+                </tr>
+                <tr>
+                    <td>1998</td>
+                    <td>Ahmed Zewail</td>
+                    <td>USA</td>
+                    <td>For his work on femtochemistry and the study of chemical reactions on the femtosecond timescale.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1999</td>
+                    <td>Aaron Klug</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the structure of biological macromolecules using X-ray crystallography and
+                        electron microscopy.</td>
+                </tr>
+                <tr>
+                    <td>2000</td>
+                    <td>Alan J. Heeger, Alan G. MacDiarmid, Hideki Shirakawa</td>
+                    <td>USA, Japan</td>
+                    <td>For their discoveries in conductive polymers and their applications in electronics.</td>
+                </tr>
+                <tr>
+                    <td>2001</td>
+                    <td>William S. Knowles, Ryoma Noyori, K. Barry Sharpless</td>
+                    <td>USA, Japan</td>
+                    <td>For their work on asymmetric catalysis and its application to the synthesis of enantiomerically
+                        pure molecules.</td>
+                </tr>
+                <tr>
+                    <td>2002</td>
+                    <td>John B. Fenn, Koichi Tanaka, Kurt Wüthrich</td>
+                    <td>USA, Japan, Switzerland</td>
+                    <td>For their development of methods in mass spectrometry and the analysis of biomolecules.</td>
+                </tr>
+                <tr>
+                    <td>2003</td>
+                    <td>Peter Agre, Roderick MacKinnon</td>
+                    <td>USA</td>
+                    <td>For their discoveries concerning channels in cell membranes.</td>
+                </tr>
+                <tr>
+                    <td>2004</td>
+                    <td>Aaron Ciechanover, Avram Hershko, Irwin Rose</td>
+                    <td>Israel, USA</td>
+                    <td>For their work on ubiquitin-mediated protein degradation.</td>
+                </tr>
+                <tr>
+                    <td>2005</td>
+                    <td>Yves Chauvin, Robert H. Grubbs, Richard R. Schrock</td>
+                    <td>France, USA</td>
+                    <td>For their work on the development of the metathesis method in organic synthesis.</td>
+                </tr>
+                <tr>
+                    <td>2006</td>
+                    <td>Roger D. Kornberg</td>
+                    <td>USA</td>
+                    <td>For his studies of the molecular basis of eukaryotic transcription.</td>
+                </tr>
+                <tr>
+                    <td>2007</td>
+                    <td>Gerhard Ertl</td>
+                    <td>Germany</td>
+                    <td>For his studies of chemical processes on solid surfaces.</td>
+                </tr>
+                <tr>
+                    <td>2008</td>
+                    <td>Osamu Shimomura, Martin Chalfie, Roger Y. Tsien</td>
+                    <td>Japan, USA</td>
+                    <td>For the discovery and development of the green fluorescent protein, GFP.</td>
+                </tr>
+                <tr>
+                    <td>2009</td>
+                    <td>Venkatraman Ramakrishnan, Thomas A. Steitz, Ada E. Yonath</td>
+                    <td>UK, USA, Israel</td>
+                    <td>For their studies of the structure and function of the ribosome.</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>Richard F. Heck, Ei-ichi Negishi, Akira Suzuki</td>
+                    <td>USA, Japan</td>
+                    <td>For their work on palladium-catalyzed cross-coupling in organic synthesis.</td>
+                </tr>
+                <tr>
+                    <td>2011</td>
+                    <td>Daniel Schechtman</td>
+                    <td>Israel</td>
+                    <td>For the discovery of quasicrystals.</td>
+                </tr>
+                <tr>
+                    <td>2012</td>
+                    <td>Robert Lefkowitz, Brian Kobilka</td>
+                    <td>USA</td>
+                    <td>For their work on G-protein-coupled receptors.</td>
+                </tr>
+                <tr>
+                    <td>2013</td>
+                    <td>Martin Karplus, Michael Levitt, Arieh Warshel</td>
+                    <td>USA, Israel</td>
+                    <td>For the development of multiscale models for complex chemical systems.</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>Eric Betzig, Stefan W. Hell, William E. Moerner</td>
+                    <td>USA, Germany</td>
+                    <td>For the development of super-resolved fluorescence microscopy.</td>
+                </tr>
+                <tr>
+                    <td>2015</td>
+                    <td>Tomas Lindahl, Paul L. Modrich, Aziz Sancar</td>
+                    <td>UK, USA, Turkey/USA</td>
+                    <td>For their mechanistic studies of DNA repair.</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>Jean-Pierre Sauvage, Sir Fraser Stoddart, Bernard L. Feringa</td>
+                    <td>France, UK/USA, Netherlands</td>
+                    <td>For the design and synthesis of molecular machines.</td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>Jacques Dubochet, Richard Henderson, Joachim Frank</td>
+                    <td>Switzerland, UK, USA</td>
+                    <td>For developing cryo-electron microscopy for the high-resolution structure determination of
+                        biomolecules in solution.</td>
+                </tr>
+                <tr>
+                    <td>2018</td>
+                    <td>Frances H. Arnold, George Smith, Sir Gregory Winter</td>
+                    <td>USA, UK</td>
+                    <td>For the directed evolution of enzymes and phage display of peptides and antibodies.</td>
+                </tr>
+                <tr>
+                    <td>2019</td>
+                    <td>John B. Goodenough, M. Stanley Whittingham, Akira Yoshino</td>
+                    <td>USA, UK, Japan</td>
+                    <td>For the development of lithium-ion batteries.</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Emmanuelle Charpentier, Jennifer A. Doudna</td>
+                    <td>France, USA</td>
+                    <td>For the development of CRISPR-Cas9, a method for genome editing.</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Benjamin List, David W.C. MacMillan</td>
+                    <td>Germany, UK</td>
+                    <td>For the development of asymmetric organocatalysis.</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Carolyn R. Bertozzi, Morten Meldal, K. Barry Sharpless</td>
+                    <td>USA, Denmark, USA</td>
+                    <td>For the development of click chemistry and bioorthogonal chemistry.</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Moungi Bawendi, Louis Brus, Alexey Ekimov</td>
+                    <td>USA, Russia</td>
+                    <td>For the discovery and development of quantum dots.</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>David Baker, Demis Hassabis, John Jumper</td>
+                    <td>USA, UK</td>
+                    <td>For their contributions to protein folding using AI technologies.</td>
+                </tr>
+                <tr>
+                    <td>2025</td>
+                    <td>To Be Announced</td>
+                    <td>To Be Announced</td>
+                    <td>To Be Announced</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- footer section -->
+    <footer class="nobel-footer text-white pt-5 pb-4"
+        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">All About Nobel</h5>
+                    <p>Discover the stories of Nobel Laureates and the impact of their contributions across the world.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Sections</h5>
+                    <p><a href="#home" class="text-white" style="text-decoration: none;" target="_self">Home</a></p>
+                    <p><a href="#categories" class="text-white" style="text-decoration: none;"
+                            target="_self">Categories</a></p>
+                    <p><a href="#gallery" class="text-white" style="text-decoration: none;" target="_self">Gallery</a>
+                    </p>
+                    <p><a href="#contact" class="text-white" style="text-decoration: none;" target="_self">Contact</a>
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Disclaimer</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> Stockholm, Sweden</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@nobel.org</p>
+                    <p><i class="fas fa-phone mr-3"></i> +46 8 123 456</p>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-6">
+                    <h5 class="text-warning text-uppercase mb-3 text-center">Subscribe for daily Updates</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                        <button class="btn btn-warning" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 All About Nobel. All rights reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-snapchat"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-wikipedia"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-quora"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

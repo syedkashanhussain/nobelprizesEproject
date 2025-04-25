@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="">
+</head>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Cinzel';
+    }
+
+    [id] {
+        scroll-margin-top: 100px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 1px;
+        background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    }
+
+    .navbar {
+        padding: 1px;
+    }
+
+    .navbar-brand {
+        color: white !important;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        color: #ffc107 !important;
+    }
+
+    .navbar-brand img {
+        height: 100px;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .navbar-nav .nav-link i:hover {
+        color: #ffc107;
+        transition: 0.3s;
+    }
+
+    @keyframes floatLogo {
+        0% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+    }
+
+    .animated-logo {
+        height: 80px;
+        animation: floatLogo 3s ease-in-out infinite;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar a {
+        color: white;
+    }
+
+    .nav-link.active {
+        color: #ffc107 !important;
+        font-weight: bold;
+    }
+
+    .navbar .nav-link:hover {
+        color: #ffc107 !important;
+    }
+
+    .navbar .nav-link:focus,
+    .navbar .nav-link:visited {
+        color: #ffffff;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+
+    /* hero sction */
+
+    .containe {
+        background-color: #0f2027;
+        margin: 0px;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        flex-flow: row wrap;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 5px 1px 4px rgb(255, 255, 255);
+        letter-spacing: 2px;
+        color: #BF8B1E;
+        text-align: center;
+    }
+
+    .physics-animation {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .wave {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid #BABABA;
+        animation: pulse 3s infinite;
+    }
+
+    .wave:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(2.5);
+            opacity: 0;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    h2 {
+        color: #2c5364;
+    }
+
+    h3 {
+        color: #2c5364;
+    }
+
+    /* hero s1 */
+
+    .card-custom {
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        flex-grow: 1;
+    }
+
+    /* hero s2 */
+
+    .img1 {
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+        height: 100%;
+        max-height: 320px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .img1 {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .animated-image {
+        opacity: 0;
+
+        transform: translatex(50px);
+
+        transition: opacity 1s ease, transform 2s ease;
+
+    }
+
+    .animated-image.animate {
+        opacity: 1;
+
+        transform: translatex(0);
+    }
+
+    .card-header-custom {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        color: #343a40;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .quick-facts-list li {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #495057;
+    }
+
+    .quick-facts-list li strong {
+        color: #2c5364;
+    }
+
+    /* hero s2 */
+    .img2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        border-radius: 10px;
+        padding: 15px;
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .img2 a {
+        font-size: 1.5rem;
+        color: #2c5364;
+        text-decoration: none;
+    }
+
+    .img2 img {
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+    }
+
+    .img2 img:hover {
+        transform: translatey(-10px);
+
+    }
+
+    .img2 a:hover {
+        text-decoration: underline;
+        font-size: 2rem;
+
+    }
+
+    .img3 {
+        border-radius: 10px;
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+
+
+    }
+
+    .img3:hover {
+        transform: translatey(-10px);
+    }
+
+
+    .big_img {
+        background-image: url(images/gallery\ 7.jpg);
+        height: 50vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom, left;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button1 {
+
+        background-color: aqua;
+        text-decoration: wavy;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 5px 5px 1px #0026ff6f;
+        background-color: black;
+        padding: 10px 20px;
+        color: #daa44d;
+    }
+
+    .button1:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px #666;
+    }
+
+    .button1:hover {
+        transform: translateY(-4px);
+    }
+
+    hr {
+        color: #2c5364;
+    }
+</style>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" class="animated-logo">
+                Nobel Prize physics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../faqs.html" target="_blank">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../sitemap.html" target="_blank">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact us.html" target="_blank">Contact Us</a></li>
+
+                    <!-- Icons -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-bell-fill fs-5"
+                                title="Notifications"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-person-circle fs-5"
+                                title="Login / Account"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-question-circle fs-5"
+                                title="Help"></i></a>
+                    </li>
+                </ul>
+                <!-- Search bar -->
+                <form class="d-flex ms-3" role="search" style="max-width: 300px; width: 100%;">
+                    <input class="form-control" type="search" placeholder="Search..." aria-label="Search"
+                        style="border-radius: 20px 0 0 20px; padding: 10px 15px; font-size: 16px; border: 2px solid #ffc107;">
+                    <button class="btn btn-outline-dark bg-warning" type="submit"
+                        style="border-radius: 0 20px 20px 0; padding: 10px 20px; font-weight: bold; border: 2px solid #ffc107; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#e0a800'; this.style.color='#fff';"
+                        onmouseout="this.style.backgroundColor='#ffc107'; this.style.color='#000';">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="containe">
+        <h1 class="heading">The Nobel Prize In Physics</h1>
+        <div class="physics-animation position-relative">
+            <img src="images/gallery 1.jpg" alt="Logo" class="logo">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-6 col-md-12 d-flex">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">About the Prize</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <p>The Nobel Prize in Physics is one of the most prestigious awards in science, given annually
+                            by the Royal Swedish Academy of Sciences. Established in 1901.</p>
+                        <p>through the will of Alfred Nobel, it recognizes individuals or groups who have made
+                            groundbreaking contributions to our understanding of the universe.</p>
+                        <p>Over the years, the prize has honored pioneers in fields ranging from quantum mechanics to
+                            cosmology, each of whom has reshaped the scientific landscape.</p>
+                        <p>The Nobel Prize recognizes scientific excellence, and each recipient's work has advanced the
+                            way we understand the physical universe, from the behavior of subatomic particles to the
+                            dynamics of galaxies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 d-flex">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">Recent Developments in Physics</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <p>
+                            The Nobel Prize in Physics continues to celebrate discoveries that push the boundaries of
+                            human knowledge.</p>
+
+                        <p>Recent awards have highlighted advancements in quantum
+                        <ul>
+                            <a href="" class=" text-dark fw-bold">
+                                <li>technology</li>
+                            </a>
+                            <a href="" class=" text-dark fw-bold">
+                                <li>black hole physics</li>
+                            </a>
+                            <a href="" class=" text-dark fw-bold">
+                                <li>climate modeling</li>
+                            </a>
+                        </ul>
+                        The Nobel Prize in Physics continues to celebrate discoveries that push the boundaries of human
+                        knowledge.
+                        Recent awards have highlighted advancements in quantum technology, black hole physics, and
+                        climate modeling. understanding of natural phenomena, and address pressing global challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch gx-4">
+            <div class="col-lg-4 col-md-12 d-flex ">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom text-center bg-light border-bottom">
+                        <h2 class="section-title mb-0">Quick Facts</h2>
+                    </div>
+                    <div class="card-body section-content p-4">
+                        <ul class="list-unstyled quick-facts-list mb-0">
+                            <li class="mb-3"><strong>Physics prizes:</strong> 118</li>
+                            <li class="mb-3"><strong>Physics laureates:</strong> 227</li>
+                            <li class="mb-3"><strong>Awarded women:</strong> 5</li>
+                            <li class="mb-3"><strong>Youngest laureate:</strong> 25</li>
+                            <li><strong>Oldest laureate:</strong> 96</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8 col-md-12 d-flex ">
+                <div class="flex-fill">
+                    <img src="images/gallery 2.png" class="img-fluid  rounded img1 animated-image  "
+                        alt="Gallery Image">
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <hr>
+    <!-- yai js img ki animate kai liye hai -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            const image = document.querySelector('.animated-image');
+            observer.observe(image);
+        });
+    </script>
+    <h2 class="text-center mb-2 bg-light">The Nobel Prize in Physics 2024</h2>
+    <hr>
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-4 col-md-12 d-flex">
+                <div class="img2 flex-fill d-flex flex-column justify-content-between">
+                    <a href="#">John J. Hopfield</a>
+                    <p>“For foundational discoveries and inventions that enable machine learning with artificial neural
+                        networks.”</p>
+                    <a href="#"><img src="images/gallery 3.jpg" alt="" class="img-fluid rounded"></a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12 d-flex">
+                <div class="flex-fill">
+                    <img src="images/gallery 4.jpg" alt="" class="img3 img-fluid w-100 h-100 rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-8 col-md-12 d-flex">
+                <div class="flex-fill">
+                    <img src="images/gallery 5.jpg" alt="" class="img3 img-fluid w-100 h-100 rounded">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 d-flex">
+                <div class="img2 flex-fill d-flex flex-column justify-content-between">
+                    <a href="#">Geoffrey Hinton</a>
+                    <p>“For foundational discoveries and inventions that enable machine learning with artificial neural
+                        networks.”</p>
+                    <a href="#"><img src="images/gallery 6.jpg" alt="" class="img-fluid rounded"></a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <hr>
+    <div class="big_img my-5">
+    </div>
+    <hr>
+    <h2 class="text-center mb-2 bg-light fw-bold ">All Nobel Prizes in Physics</h2>
+    <hr>
+    <div class="my-5 button-container">
+        <a href="full detailed.html" class="button1">
+            See the full list of physics prizes and laureates
+        </a>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card card-custom">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">How is the Nobel Prize in Physics Awarded?</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <div class="d-flex flex-wrap">
+                            <ol>
+                                <li>
+                                    <h3>Nominations</h3>
+                                    <p>Each year, physicists, institutions, and previous Nobel laureates can nominate
+                                        candidates for the prize. The nomination process is highly confidential and
+                                        rigorous, ensuring that only deserving individuals are selected for this
+                                        prestigious
+                                        recognition.</p>
+                                </li>
+                                <li>
+                                    <h3>Evaluation Process</h3>
+                                    <p>Once nominations are received, the Royal Swedish Academy of Sciences forms a
+                                        selection committee of experts who evaluate the nominees’ scientific
+                                        contributions. These committee members conduct extensive reviews, often seeking
+                                        advice from other researchers in the field.</p>
+                                </li>
+                                <li>
+                                    <h3>Announcement</h3>
+                                    <p>The Nobel laureates in Physics are announced in early October, and the award
+                                        ceremony takes place on December 10th, the anniversary of Alfred Nobel's death.
+                                        The ceremony includes the awarding of a gold medal, a diploma, and a monetary
+                                        prize.</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <img src="images/gallery 8.jpg" alt="Nobel Prize Medal 1"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/gallery 9.png" alt="certificate"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/gallery 10.jpg" alt="prize"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="nobel-footer text-white pt-5 pb-4"
+    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">All About Nobel</h5>
+                <p>Discover the stories of Nobel Laureates and the impact of their contributions across the world.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Sections</h5>
+                <p><a href="#home" class="text-white" style="text-decoration: none;" target="_self">Home</a></p>
+                <p><a href="#categories" class="text-white" style="text-decoration: none;"
+                        target="_self">Categories</a></p>
+                <p><a href="#gallery" class="text-white" style="text-decoration: none;" target="_self">Gallery</a>
+                </p>
+                <p><a href="#contact" class="text-white" style="text-decoration: none;" target="_self">Contact</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Disclaimer</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p><i class="fas fa-home mr-3"></i> Stockholm, Sweden</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@nobel.org</p>
+                <p><i class="fas fa-phone mr-3"></i> +46 8 123 456</p>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <h5 class="text-warning text-uppercase mb-3 text-center">Subscribe for daily Updates</h5>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p>© 2025 All About Nobel. All rights reserved.</p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-right">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-snapchat"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-wikipedia"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-quora"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

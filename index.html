@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Nobel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="faqs.html">
+    <link rel="stylesheet" href="sitemap.html">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel';
+        }
+
+        [id] {
+            scroll-margin-top: 100px;
+        }
+
+        .navbar {
+            padding: 1px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar-brand img {
+            height: 100px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .navbar-nav .nav-link i:hover {
+            color: #ffc107;
+            transition: 0.3s;
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-5px) scale(1.05);
+            }
+
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+        }
+
+        .animated-logo {
+            height: 80px;
+            animation: floatLogo 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .nav-link.active {
+            color: #ffc107 !important;
+            font-weight: bold;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar .nav-link:focus,
+        .navbar .nav-link:visited {
+            color: #ffffff;
+        }
+        .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #000;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero .overlay {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #about {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            min-height: 100vh;
+        }
+
+        @media (max-width: 767px) {
+            #about {
+                background-size: contain;
+                background: rgba(255, 255, 255, 0.95);
+                /* Remove image and gradient on small screens */
+                min-height: auto;
+            }
+        }
+
+        #about p {
+            padding: 15px 0;
+            line-height: 1.6;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+        }
+
+        .quote-carousel {
+            background: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .stat-box {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-img:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .stat-box {
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .hand-animate {
+            font-size: 2rem;
+            animation: handMove 1.5s infinite ease-in-out;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        @keyframes handMove {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .carousel-item img {
+            object-fit: contain;
+            max-height: 400px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-size: 60% 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .winner-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nobel-footer {
+            background-color: #1c1c1c;
+        }
+
+        .nobel-footer a:hover {
+            color: #ffc107 !important;
+            text-decoration: underline;
+        }
+
+        .nobel-footer i {
+            margin-right: 8px;
+        }
+
+        .nobel-footer i:hover {
+            color: #ffc107;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="logo/logo.png" alt="Logo" class="animated-logo">
+                Nobel Prize Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faqs.html" target="_blank">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sitemap.html" target="_blank">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact us.html" target="_blank">Contact Us</a></li>
+
+                    <!-- Icons -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-bell-fill fs-5"
+                                title="Notifications"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-person-circle fs-5"
+                                title="Login / Account"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-question-circle fs-5"
+                                title="Help"></i></a>
+                    </li>
+                </ul>
+
+                <!-- Search bar -->
+                <form class="d-flex ms-3" role="search" style="max-width: 300px; width: 100%;">
+                    <input class="form-control" type="search" placeholder="Search..." aria-label="Search"
+                        style="border-radius: 20px 0 0 20px; padding: 10px 15px; font-size: 16px; border: 2px solid #ffc107;">
+                    <button class="btn btn-outline-dark bg-warning" type="submit"
+                        style="border-radius: 0 20px 20px 0; padding: 10px 20px; font-weight: bold; border: 2px solid #ffc107; transition: background-color 0.3s ease, color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor=getComputedStyle(document.documentElement).getPropertyValue('--nav-bg-color'); this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--nav-text-color');"
+                        onmouseout="this.style.backgroundColor='#ffc107'; this.style.color='#000';">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <video autoplay muted loop class="position-absolute w-100 h-100" style="object-fit: cover; z-index: 0;">
+            <source src="./videos/The Nobel Banquet in one minute.mp4" type="video/mp4">
+        </video>
+        <div class=""></div>
+        <div class="hero-content">
+            <u>
+                <h1 class="display-4">All About Nobel</h1>
+            </u>
+            <u>
+                <p class="lead">Explore the legacy of the Nobel Prize</p>
+            </u>
+            <a href="#about" class="btn btn-warning mt-3">Start Exploring</a>
+        </div>
+    </div>
+    
+    <!-- Animated Statistics -->
+    <section class="py-5">
+        <div class="container bg-light">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 id="totalPrizes">0</h3>
+                        <p>Total Nobel Prizes</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 id="firstYear">0</h3>
+                        <p>First Year Awarded</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3 id="mainCategories">0</h3>
+                        <p>Main Categories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-5 shadow-sm "
+        style="margin-top: 50px; background: linear-gradient(to right, rgba(255,255,255,0.95) 20%, rgba(255,255,255,0) 60%), url('./images/about image.png') right center / cover no-repeat;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12 text-start" style="margin-top: 200px;">
+                    <u>
+                        <h2 class="text-dark">About the Nobel Prize</h2>
+                    </u>
+                    <p class="text-dark">
+                        The Nobel Prize is a set of international awards given annually in several categories such as
+                        Physics, Chemistry, Medicine, Literature, Peace, and Economic Sciences. It was established by
+                        Alfred
+                        Nobel, the inventor of dynamite.
+                    </p>
+                    <p class="text-dark">
+                        Nobel Prizes are awarded in the fields of Physics, Chemistry, Physiology or Medicine,
+                        Literature, and Peace.
+                        In 1968, Sweden's central bank funded the Prize in Economic Sciences in Memory of Alfred Nobel.
+                        These prizes are among the most prestigious awards in their fields.
+                    </p>
+                    <a href="winners list.html" class="btn btn-warning mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-5 bg-light">
+        <div class="container">
+            <u>
+                <h1 class="text-center mb-5">Prize Categories</h1>
+            </u>
+            <div class="row">
+                <!-- Category Card 1 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-1s">
+                        <a href="physics/p index.html" class="text-decoration-none text-dark">
+                        <h3>Physics</h3>
+                        </a>
+                        <p class="card-text">Recognizing discoveries that <br> explain the universe's laws.</p>
+                        <a href="physics/p index.html">
+                        <img src="images/physics.jpg" class="category-img" alt="Physics">
+                    </a>
+                    </div>
+                </div>
+                <!-- Category Card 2 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-1s">
+                        <a href="chemistry/c index.html" class="text-decoration-none text-dark">
+                        <h3>Chemistry</h3>
+                    </a>
+                        <p class="card-text">Honoring breakthroughs <br> in chemical science and research.</p>
+                         <a href="chemistry/c index.html">
+                        <img src="images/Chemistry.jpg" class="category-img" alt="Chemistry">
+                        </a>
+                    </div>
+                </div>
+                <!-- Category Card 3 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="Peace/peace index .html" class="text-decoration-none text-dark">
+                        <h3>Peace</h3>
+                    </a>
+                        <p class="card-text">Awarded for efforts to <br> promote peace and diplomacy.</p>
+                         <a href="Peace/peace index .html">
+                        <img src="images/peace.jpg" class="category-img" alt="Peace">
+                        </a>
+                    </div>
+                </div>
+                <!-- Category Card 4 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="Economic Sciences/ES index.html" class="text-decoration-none text-dark">
+                        <h3>Economic Sciences</h3>
+                    </a>
+                        <p class="card-text">For research and theories <br> in the field of economics.</p>
+                         <a href="Economic Sciences/ES index.html">
+                        <img src="images/economic science.jpg" class="category-img" alt="Economic Sciences">
+                        </a>
+                    </div>
+                </div>
+                <!-- Category Card 5 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="Literature/L index.html" class="text-decoration-none text-dark">
+                        <h3>Literature</h3>
+                    </a>
+                        <p class="card-text">Awarded for outstanding <br> contributions to literary arts.</p>
+                         <a href="Literature/L index.html">
+                        <img src="images/literature.jpg" class="category-img" alt="Literature">
+                        </a>
+                    </div>
+                </div>
+                <!-- Category Card 6 -->
+                <div class="col-md-4 d-flex align-items-stretch mb-4">
+                    <div
+                        class="stat-box text-center p-3 shadow-sm bg-white rounded animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="physiology or medicine/PM index.html" class="text-decoration-none text-dark">
+                        <h3>Medicine</h3>
+                    </a>
+                        <p class="card-text">Given for discoveries improving <br> medical science and health.</p>
+                         <a href="physiology or medicine/PM index.html">
+                        <img src="images/medicine.jpg" class="category-img" alt="Medicine">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section id="slider" class="py-5">
+        <div class="container">
+            <u>
+                <h1 class="text-center mb-5">Nobel Prize Moments</h1>
+            </u>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="images/Gallery 1.jpg" class="d-block w-100" alt="Gallery Image 1">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 2.jpg" class="d-block w-100" alt="Gallery Image 2">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 3.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 4.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 5.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 6.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 7.png" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 8.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 9.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 10.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 11 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 11.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 12 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 12.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 13 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 13.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 14 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 14.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 15 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 15.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 16 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 16.png" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Slide 17 -->
+                    <div class="carousel-item">
+                        <img src="images/Gallery 17.jpg" class="d-block w-100" alt="Gallery Image 3">
+                    </div>
+                    <!-- Previous Button -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Winners Section -->
+    <section id="winners" class="py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-3">Famous Nobel Laureates</h1>
+            <div class="row">
+                <!-- Winner Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="images/Albert noble.jpg" class="card-img-top winner-img" alt="Albert Einstein">
+                        <div class="card-body">
+                            <h5 class="card-title">Albert Einstein</h5>
+                            <p class="card-text">Won the Nobel Prize in Physics (1921) for his discovery of the
+                                photoelectric effect.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Winner Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="images/marie noble.png" class="card-img-top winner-img" alt="Marie Curie">
+                        <div class="card-body">
+                            <h5 class="card-title">Marie Curie</h5>
+                            <p class="card-text">First woman to win the Nobel Prize — in both Physics (1903) and
+                                Chemistry (1911).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Winner Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="images/Malala noble.jpg" class="card-img-top winner-img" alt="Malala Yousafzai">
+                        <div class="card-body">
+                            <h5 class="card-title">Malala Yousafzai</h5>
+                            <p class="card-text">Won the Peace Prize (2014) for her struggle against the suppression of
+                                children and young people.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Winner Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="images/Nelson noble.jpg" class="card-img-top winner-img" alt="Nelson Mandela">
+                        <div class="card-body">
+                            <h5 class="card-title">Nelson Mandela</h5>
+                            <p class="card-text">Won the Nobel Peace Prize (1993) for his work in ending apartheid and
+                                fostering reconciliation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nobel Winners Button with Hand Animation -->
+                <div class="d-flex justify-content-center align-items-center mb-5" style="gap: 15px;">
+
+                    <!-- Animated Hand -->
+                    <div class="hand-animate">
+                        👉
+                    </div>
+
+                    <!-- Button -->
+                    <a href="winners list.html" class="btn btn-warning fw-bold">
+                        View Nobel Winners List (1901–2025)
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <u>
+                <h1 class="text-center mb-4">Nobel Gallery</h1>
+            </u>
+            <!-- Images Section -->
+            <u>
+                <h2 class="mb-4 text-dark text-center">Images Section</h2>
+            </u>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 1.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 2.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 3.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 3">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 4.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 4">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 5.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 5">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 6.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 6">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 7.png" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 7">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 8.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 8">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 9.jpg" class="img-fluid gallery-img rounded shadow" alt="Gallery Image 9">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 10.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 10">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 11.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 11">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 12.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 12">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 13.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 13">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 14.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 14">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 15.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 15">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 16.png" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 16">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 17.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 17">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/Gallery 18.jpg" class="img-fluid gallery-img rounded shadow"
+                        alt="Gallery Image 18">
+                </div>
+
+                <!-- Videos Section -->
+                <section id="videos" class="mt-5 mb-5">
+                    <u>
+                        <h2 class="text-dark text-center mb-4">Videos Section</h2>
+                    </u>
+                    <div class="container">
+                        <div class="row g-4">
+
+                            <!-- Video 1 -->
+                            <div class="col-md-6 mx-auto">
+                                <div class="card bg-dark text-white shadow-lg rounded-4"
+                                    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                                        <iframe src="https://www.youtube.com/embed/zqvPpz1huIw?si=6PK-4JYeAh08XuAG"
+                                            title="Nobel Peace Prize 2024" allowfullscreen allow="autoplay"></iframe>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Nobel Prize Ceremony 2024</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video 2 -->
+                            <div class="col-md-6 mx-auto">
+                                <div class="card bg-dark text-white shadow-lg rounded-4"
+                                    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden"> <iframe
+                                            src="https://www.youtube.com/embed/yKrjqPvwD64?si=nLz9JXq97Fkix3gC"
+                                            title="Nobel Peace Prize 2023" allowfullscreen allow="autoplay"></iframe>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Nobel Prize Ceremony 2023</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="col-md-6 mx-auto">
+                                <div class="card bg-dark text-white shadow-lg rounded-4"
+                                    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden"> <iframe
+                                            src="https://www.youtube.com/embed/IiO3fikAUng?si=7n4gB69mxPVpAHgV"
+                                            title="Nobel Peace Prize 2022" allowfullscreen allow="autoplay"></iframe>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Nobel Prize Ceremony 2022</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="col-md-6 mx-auto">
+                                <div class="card bg-dark text-white shadow-lg rounded-4"
+                                    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden"> <iframe
+                                            src="https://www.youtube.com/embed/ieuZUQRkZBU?si=BH9I05InJ0CPWcgi"
+                                            title="Nobel Peace Prize 2021" allowfullscreen allow="autoplay"></iframe>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Nobel Prize Ceremony 2021</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video 5 -->
+                <div class="col-md-6 mx-auto">
+                    <div class="card bg-dark text-white shadow-lg rounded-4"
+                        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                        <div class="ratio ratio-16x9 rounded-4 overflow-hidden"> <iframe
+                                src="https://www.youtube.com/embed/PgekkKn7zmU?si=pnNtGPSYDm-Zo9lj"
+                                title="Nobel Peace Prize 2021" allowfullscreen allow="autoplay"></iframe>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nobel Prize Ceremony 2020</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 6 -->
+                <div class="col-md-6 mx-auto">
+                    <div class="card bg-dark text-white shadow-lg rounded-4"
+                        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+                        <div class="ratio ratio-16x9 rounded-4 overflow-hidden"> <iframe
+                                src="https://www.youtube.com/embed/Z7q2Miw5j3E?si=fLgirxZa42r9JyWg"
+                                title="Nobel Peace Prize 2021" allowfullscreen allow="autoplay"></iframe>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nobel Prize Ceremony 2019</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="nobel-footer text-white pt-5 pb-4"
+        style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">All About Nobel</h5>
+                    <p>Discover the stories of Nobel Laureates and the impact of their contributions across the world.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Sections</h5>
+                    <p><a href="#home" class="text-white" style="text-decoration: none;" target="_self">Home</a></p>
+                    <p><a href="#categories" class="text-white" style="text-decoration: none;"
+                            target="_self">Categories</a></p>
+                    <p><a href="#gallery" class="text-white" style="text-decoration: none;" target="_self">Gallery</a>
+                    </p>
+                    <p><a href="#contact" class="text-white" style="text-decoration: none;" target="_self">Contact</a>
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Disclaimer</a></p>
+                    <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-3"></i> Stockholm, Sweden</p>
+                    <p><i class="fas fa-envelope mr-3"></i> info@nobel.org</p>
+                    <p><i class="fas fa-phone mr-3"></i> +46 8 123 456</p>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-6">
+                    <h5 class="text-warning text-uppercase mb-3 text-center">Subscribe for daily Updates</h5>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                        <button class="btn btn-warning" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 All About Nobel. All rights reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-snapchat"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-wikipedia"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-quora"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function animateCount(id, target, speed = 50, step = 1) {
+            let count = 0;
+            const el = document.getElementById(id);
+            const interval = setInterval(() => {
+                if (count < target) {
+                    count += step;
+                    el.innerText = count;
+                } else {
+                    el.innerText = target;
+                    clearInterval(interval);
+                }
+            }, speed);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            animateCount("totalPrizes", 965, 20, 2);      // slow & smooth
+            animateCount("firstYear", 1901, 5, 1);         // slower, one by one
+            animateCount("mainCategories", 6, 300, 1);     // very slow for small number
+        });
+
+    </script>
+</body>
+
+</html>

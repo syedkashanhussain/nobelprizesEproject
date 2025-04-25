@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>physiology or medicine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Cinzel';
+    }
+
+    [id] {
+        scroll-margin-top: 100px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 1px;
+        background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    }
+
+    .navbar {
+        padding: 1px;
+    }
+
+    .navbar-brand {
+        color: white !important;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        color: #ffc107 !important;
+    }
+
+    .navbar-brand img {
+        height: 100px;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .navbar-nav .nav-link i:hover {
+        color: #ffc107;
+        transition: 0.3s;
+    }
+
+    @keyframes floatLogo {
+        0% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+    }
+
+    .animated-logo {
+        height: 80px;
+        animation: floatLogo 3s ease-in-out infinite;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar a {
+        color: white;
+    }
+
+    .nav-link.active {
+        color: #ffc107 !important;
+        font-weight: bold;
+    }
+
+    .navbar .nav-link:hover {
+        color: #ffc107 !important;
+    }
+
+    .navbar .nav-link:focus,
+    .navbar .nav-link:visited {
+        color: #ffffff;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+
+    /* hero sction */
+    
+   
+    .hero {
+        background-image: url('images/gallery\ 34.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 5px 1px 4px #f18ae0;
+        letter-spacing: 2px;
+        color: #2c5364;
+        text-align: center;
+    }
+
+
+    /* hero s1 */
+
+    .card-custom {
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        flex-grow: 1;
+    }
+
+    /* hero s2 */
+
+    .img1 {
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+        height: 100%;
+        max-height: 320px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .img1 {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .animated-image {
+        opacity: 0;
+
+        transform: translatex(50px);
+
+        transition: opacity 1s ease, transform 2s ease;
+
+    }
+
+    .animated-image.animate {
+        opacity: 1;
+
+        transform: translatex(0);
+    }
+
+    .card-header-custom {
+        background-color: #f9f9f9;
+        font-weight: bold;
+        color: #343a40;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .quick-facts-list li {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #495057;
+    }
+
+    .quick-facts-list li strong {
+        color: #2c5364;
+    }
+
+    /* hero s2 */
+    .img2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        border-radius: 10px;
+        padding: 15px;
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .img2 a {
+        font-size: 1.5rem;
+        color: #2c5364;
+        text-decoration: none;
+    }
+
+    .img2 img {
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+    }
+
+    .img2 img:hover {
+        transform: translatey(-10px);
+
+    }
+
+    .img2 a:hover {
+        text-decoration: underline;
+        font-size: 2rem;
+
+    }
+
+    .img3 {
+        border-radius: 10px;
+        box-shadow: 0 10px 6px rgba(7, 7, 255, 0.1);
+
+
+    }
+
+    .img3:hover {
+        transform: translatey(-10px);
+    }
+
+
+ 
+    .big_img {
+        background-image: url(images/medicine.jpg);
+        height: 60vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center, left;
+
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button1 {
+
+        background-color: aqua;
+        text-decoration: wavy;
+        font-size: 20px;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 20px;
+        box-shadow: 0px 5px 5px 1px #0026ff6f;
+        background-color: black;
+        padding: 10px 20px;
+        color: #daa44d;
+    }
+
+    .button1:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px #666;
+    }
+
+    .button1:hover {
+        transform: translateY(-4px);
+    }
+
+    hr {
+        color: #2c5364;
+    }
+
+    h2 {
+        color: #2c5364;
+    }
+
+    h3 {
+        color: #2c5364;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" class="animated-logo">
+                Nobel Prize Medicine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../faqs.html" target="_blank">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../sitemap.html" target="_blank">Sitemap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact us.html" target="_blank">Contact Us</a></li>
+
+                    <!-- Icons -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-bell-fill fs-5"
+                                title="Notifications"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-person-circle fs-5"
+                                title="Login / Account"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#" target="_self"><i class="bi bi-question-circle fs-5"
+                                title="Help"></i></a>
+                    </li>
+                </ul>
+                <!-- Search bar -->
+                <form class="d-flex ms-3" role="search" style="max-width: 300px; width: 100%;">
+                    <input class="form-control" type="search" placeholder="Search..." aria-label="Search"
+                        style="border-radius: 20px 0 0 20px; padding: 10px 15px; font-size: 16px; border: 2px solid #ffc107;">
+                    <button class="btn btn-outline-dark bg-warning" type="submit"
+                        style="border-radius: 0 20px 20px 0; padding: 10px 20px; font-weight: bold; border: 2px solid #ffc107; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#e0a800'; this.style.color='#fff';"
+                        onmouseout="this.style.backgroundColor='#ffc107'; this.style.color='#000';">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>The Noble Prize In Physiology or Medicine </h1>
+    </div>
+<hr>      
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-5 col-md-12 d-flex">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">About the Prize</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <h2 class="mb-4 mt-3">Nobel Prize in physiology or medicine</h2>
+                        <p>The Nobel Prize in Physiology or Medicine is one of the most prestigious international
+                            awards, given annually for outstanding contributions to the fields of medical science and
+                            biological research.
+                        </p>
+                        <p> It honors discoveries that have significantly advanced our understanding of human biology,
+                            health, and disease.</p>
+                        <p>The Nobel Prize in Physiology or Medicine is awarded annually to individuals or groups who
+                            make outstanding discoveries in the fields of biology, physiology, and medical science.
+                        </p>
+                        <p> It’s one of the five original Nobel Prizes established by Alfred Nobel in his will in 1895.
+                        </p>
+                        <p class="mb-1">The prize has been awarded since 1901 by the Nobel Assembly at the Karolinska
+                            Institute in
+                            Sweden.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12 d-flex">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">Recent Developments in  physiology or medicine</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <p class="mt-4">The Nobel Prize in Physiology or Medicine has been awarded for a variety of
+                            groundbreaking
+                            discoveries in recent years. Below are some of the most significant developments from the
+                            past few years, highlighting cutting-edge research that has transformed medical science:</p>
+                        <h2 class="section-t itle">🔹 2024</h2>
+                        <ul>
+                            <h3><strong>Victor Ambros & Gary Ruvkun</strong> <br><br>
+                                <strong>Discovery:</strong> MicroRNAs and their role in gene regulation.
+                            </h3>
+                            <li class="mt-3">
+                                <p>MicroRNAs are tiny RNA molecules that regulate the expression of genes. They can turn
+                                    genes on or off, influencing various biological processes, including development,
+                                    metabolism, and diseases like cancer and neurodegenerative disorders.
+                                </p>
+                            </li>
+                            <li class="mt-3 mb-4">
+                                <p>Ambros and Ruvkun’s discovery of how microRNAs control gene expression has advanced
+                                    our understanding of how genes function in health and disease.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <hr>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card card-custom">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">🔬 Fields Covered</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <h2 class="mb-4 mt-3">Nobel Prize in Chemistry</h2>
+                        <ol>
+
+                            <li>
+                                <h2>Genetics and DNA</h2>
+                                <p>Genetics is the study of genes, heredity, and the variation of traits in organisms.
+                                    DNA (Deoxyribonucleic Acid) carries the genetic instructions used in growth,
+                                    development, functioning, and reproduction of all living organisms. Key discoveries
+                                    in this area have revolutionized genetic engineering, gene therapy, and personalized
+                                    medicine.</p>
+                            </li>
+                            <li>
+                                <h2>Vaccines and Immunology</h2>
+                                <p>Immunology is the study of the immune system, which protects the body from diseases.
+                                    Vaccines are substances used to stimulate the immune system to protect against
+                                    infections. Nobel Prizes in this field often recognize breakthroughs in vaccine
+                                    development and understanding of how the immune system defends the body.</p>
+                            </li>
+                            <li>
+                                <h2>Neuroscience</h2>
+                                <p>Neuroscience is the study of the nervous system, including the brain, spinal cord,
+                                    and nerves. Nobel Prizes in neuroscience have often honored discoveries in
+                                    neurobiology, brain function, neurotransmission, and neurodegenerative diseases.</p>
+                            </li>
+                            <li>
+                                <h2>Cell Biology</h2>
+                                <p>Cell Biology studies the structure and function of cells, which are the building
+                                    blocks of life. Key discoveries in cell biology have led to advancements in cell
+                                    division, cell signaling, stem cells, and how cells interact to form tissues and
+                                    organs.</p>
+                            </li>
+                            <li>
+                                <h2>Infectious Diseases</h2>
+                                <p>Infectious diseases are caused by microorganisms like bacteria, viruses, fungi, and
+                                    parasites. Nobel Prizes in this field recognize breakthroughs in understanding how
+                                    pathogens spread, how the immune system responds, and how to develop antibiotics and
+                                    antiviral drugs.</p>
+                            </li>
+                            <li>
+                                <h2>Cancer Research</h2>
+                                <p>Cancer research focuses on understanding the biological mechanisms that lead to the
+                                    uncontrolled growth of abnormal cells. Nobel Prizes in cancer research have
+                                    highlighted discoveries related to cell cycle regulation, oncogenes, and targeted
+                                    therapies for treating cancer.</p>
+                            </li>
+                            <li>
+                                <h2>Medical Technologies</h2>
+                                <p>Medical technologies are tools and techniques that improve health care and medical
+                                    research. This includes innovations like medical imaging, diagnostic tools, and
+                                    treatment devices (e.g., prosthetics, pacemakers). Nobel Prizes in this area
+                                    recognize advances that have transformed the way we treat diseases and conduct
+                                    medical research.</p>
+                            </li>
+                        </ol>
+                        <h2>🧬 Summary</h2>
+                        <p>These seven fields are at the forefront of medical and biological sciences and have led to
+                            groundbreaking discoveries that have revolutionized healthcare and medicine. From
+                            understanding how our genes work to creating vaccines and treatments for deadly diseases,
+                            these Nobel Prizes showcase humanity’s most significant achievements in medicine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+      <div class="container my-5">
+        <div class="row d-flex align-items-stretch gx-4">
+            <div class="col-lg-4 col-md-12 d-flex ">
+                <div class="card card-custom flex-fill">
+                    <div class="card-header card-header-custom text-center bg-light border-bottom">
+                        <h2 class="section-title mb-0">Quick Facts</h2>
+                    </div>
+                    <div class="card-body section-content p-4">
+                        <ul class="list-unstyled quick-facts-list mb-0">
+                            <li class="mb-3"><strong>Medicine prizes: </strong> 115</li>
+                            <li class="mb-3"><strong>Medicine laureates:</strong> 229</li>
+                            <li class="mb-3"><strong>Awarded women:</strong>13 </li>
+                            <li class="mb-3"><strong>Youngest laureate:</strong> 31</li>
+                            <li><strong>Oldest laureate: </strong>87 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12 d-flex ">
+                <div class="flex-fill">
+                    <img src="images/gallery 35.jpg" class="img-fluid  rounded img1 animated-image  "
+                        alt="Gallery Image">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- yai js img ki animate kai liye hai -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            const image = document.querySelector('.animated-image');
+            observer.observe(image);
+        });
+    </script>
+    <hr>
+    <h2 class="text-center mb-2 bg-light">The Nobel Prize in physiology or medicine 2024</h2>
+    <hr>
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-4 col-md-12 d-flex">
+                <div class="img2 flex-fill d-flex flex-column justify-content-between">
+                    <a href="">Victor R. Ambros</a>
+                    <p>Victor Ambros earned his B.A. degree from Bowdoin College in 1979. </p>
+                    <a href="#"><img src="images/gallery 36.jpg" alt="" class="img-fluid rounded"></a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12 d-flex">
+                <div class="flex-fill">
+                    <img src="images/gallery 37.webp" alt="" class="img3 img-fluid w-100 h-100 rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-5">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-lg-8 col-md-12 d-flex">
+                <div class="flex-fill">
+                    <img src="images/gallery 39.jpg" alt="" class="img3 img-fluid w-100 h-100 rounded">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 d-flex">
+                <div class="img2 flex-fill d-flex flex-column justify-content-between">
+                    <a href="">Gary Ruvkun</a>
+                    <p>Ruvkun grew up with an interest in biological sciences and went on to earn his B.A. in Biology from Harvard University in 1977.
+                    </p>
+                    <a href="#"><img src="images/gallery38.jpg" alt="" class="img-fluid rounded"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+      <div class="big_img my-5">
+    </div>
+    <hr>
+
+    <h2 class="text-center mb-2 bg-light fw-bold ">All Nobel Prizes in physiology or medicine</h2>
+
+    <hr>
+
+
+    <div class="my-5 button-container">
+        <a href="full detailed C.html" class="button1">
+            See the full list of physiology or medicine prizes and laureates
+        </a>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card card-custom">
+                    <div class="card-header card-header-custom">
+                        <h2 class="section-title">How is the Nobel Prize in physiology or medicine Awarded?</h2>
+                    </div>
+                    <div class="card-body section-content">
+                        <div class="d-flex flex-wrap">
+                            <ol>
+                                <li>
+                                    <h3>Nominations</h3>
+                                    <p>•	Invitations to Nominate: Each year, the Nobel Assembly invites thousands of qualified individuals to submit nominations. These invitees include:.</p>
+                                </li>
+                                <li>
+                                    <h3> Award Ceremony</h3>
+                                    <p> The Nobel Prize in Physiology or Medicine is presented on December 10, the anniversary of Alfred Nobel's death.</p>
+                                    <p>The ceremony is held in Stockholm, Sweden, where</p>
+                                    <p>The laureate receives:</p>
+                                    <ul>
+                                        <li><strong>A gold medal</strong></li>
+                                        <li><strong> A diploma</strong></li>
+                                        <li><strong>A monetary award</strong> the amount of which varies based on the Nobel Foundation's financial standing.</li>
+                                    </ul>
+                                </li>
+
+                              
+
+
+                                <li class="mt-2">
+                                    <h3>Announcement</h3>
+                                  <p>The announcement is a significant event in the scientific community, as it highlights groundbreaking research and discoveries that have a profound impact on medicine and human health.</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <img src="images/gallery 40.jpg" alt="Nobel Prize Medal 1"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/gallery 41.jpg" alt="certificate"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/gallery 42.jpg" alt="prize"
+                                    class="img-fluid rounded shadow h-100 w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="nobel-footer text-white pt-5 pb-4"
+    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">All About Nobel</h5>
+                <p>Discover the stories of Nobel Laureates and the impact of their contributions across the world.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Sections</h5>
+                <p><a href="#home" class="text-white" style="text-decoration: none;" target="_self">Home</a></p>
+                <p><a href="#categories" class="text-white" style="text-decoration: none;"
+                        target="_self">Categories</a></p>
+                <p><a href="#gallery" class="text-white" style="text-decoration: none;" target="_self">Gallery</a>
+                </p>
+                <p><a href="#contact" class="text-white" style="text-decoration: none;" target="_self">Contact</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Disclaimer</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p><i class="fas fa-home mr-3"></i> Stockholm, Sweden</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@nobel.org</p>
+                <p><i class="fas fa-phone mr-3"></i> +46 8 123 456</p>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <h5 class="text-warning text-uppercase mb-3 text-center">Subscribe for daily Updates</h5>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p>© 2025 All About Nobel. All rights reserved.</p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-right">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-snapchat"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-wikipedia"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-quora"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
+

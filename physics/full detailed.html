@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full detailed</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+<body>
+    <style>
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1px;
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+        }
+
+        .navbar-brand img {
+            height: 100px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link i:hover {
+            color: #ffc107;
+            transition: 0.3s;
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-5px) scale(1.05);
+            }
+
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+        }
+
+        .animated-logo {
+            height: 80px;
+            animation: floatLogo 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .nav-link.active {
+            color: #ffc107 !important;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar-brand:hover {
+            color: #ffc107 !important;
+
+        }
+
+        .container1 {
+            margin: 10px;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+
+        h1,
+        h2 {
+            color: #AE7C3F;
+        }
+
+        h3 {
+            color: #AE7C3F;
+            ;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <a class="navbar-brand" href="p index.html">
+                <img src="images/logo.png" alt="Logo" class="animated-logo">
+                Nobel Prize physics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex ms-auto" role="search" style="max-width: 450px; width: 100%;">
+                    <input class="form-control" type="search" placeholder="Search..." aria-label="Search"
+                        style="border-radius: 20px 0 0 20px; padding: 10px 15px; font-size: 16px; border: 2px solid #ffc107;">
+                    <button class="btn btn-outline-dark bg-warning" type="submit"
+                        style="border-radius: 0 20px 20px 0; padding: 10px 20px; font-weight: bold; border: 2px solid #ffc107; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#e0a800'; this.style.color='#fff';"
+                        onmouseout="this.style.backgroundColor='#ffc107'; this.style.color='#000';">
+                        Search
+                    </button>
+                </form>
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#winners">Winners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sitemap">Sitemap</a></li>
+                    <!-- Icons -->
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="bi bi-bell-fill fs-5" title="Notifications"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="bi bi-person-circle fs-5"
+                                title="Login / Account"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="bi bi-question-circle fs-5" title="Help"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold bg-light">Nobel Prize Winners (1901-2025)</h2>
+
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="text-center">
+                <tr>
+
+                    <th>Year</th>
+                    <th>Winner(s)</th>
+                    <th>Country</th>
+                    <th>Contribution</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1901</td>
+                    <td>Wilhelm Conrad Röntgen</td>
+                    <td>Germany</td>
+                    <td>For the discovery of X-rays.</td>
+                </tr>
+                <tr>
+                    <td>1902</td>
+                    <td>Hendrik Antoon Lorentz, Pieter Zeeman</td>
+                    <td>Netherlands</td>
+                    <td>For their work on the influence of magnetism upon radiation phenomena.</td>
+                </tr>
+                <tr>
+                    <td>1903</td>
+                    <td>Henri Becquerel, Marie Curie, Pierre Curie</td>
+                    <td>Poland/France</td>
+                    <td>For their joint research on radiation phenomena.</td>
+                </tr>
+                <tr>
+                    <td>1904</td>
+                    <td>John William Strutt, 3rd Baron Rayleigh</td>
+                    <td>United Kingdom</td>
+                    <td>For the discovery of argon in atmospheric air.</td>
+                </tr>
+                <tr>
+                    <td>1905</td>
+                    <td>Albert A. Michelson</td>
+                    <td>USA</td>
+                    <td>For his precision optical instruments and the spectroscopic and geometric determinations of the
+                        speed of light.</td>
+                </tr>
+                <tr>
+                    <td>1906</td>
+                    <td>J.J. Thomson</td>
+                    <td>United Kingdom</td>
+                    <td>For his theoretical and experimental investigations on the conduction of electricity by gases.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1907</td>
+                    <td>Albert Michelson</td>
+                    <td>USA</td>
+                    <td>For his precision optical instruments and the spectroscopic and geometric determinations of the
+                        speed of light.</td>
+                </tr>
+                <tr>
+                    <td>1908</td>
+                    <td>Gabriel Lippmann</td>
+                    <td>France</td>
+                    <td>For his method of reproducing colors photographically based on the phenomenon of interference.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1909</td>
+                    <td>Guglielmo Marconi, Ferdinand Braun</td>
+                    <td>Italy, Germany</td>
+                    <td>For their contributions to the development of wireless telegraphy.</td>
+                </tr>
+                <tr>
+                    <td>1910</td>
+                    <td>Johannes Diderik van der Waals</td>
+                    <td>Netherlands</td>
+                    <td>For his work on the equation of state for gases and liquids.</td>
+                </tr>
+                <tr>
+                    <td>1911</td>
+                    <td>Marie Curie</td>
+                    <td>Poland/France</td>
+                    <td>For her services to the advancement of chemistry by the discovery of radium and polonium.</td>
+                </tr>
+                <tr>
+                    <td>1912</td>
+                    <td>Nils Gustaf Dalén</td>
+                    <td>Sweden</td>
+                    <td>For his invention of automatic regulators for use in conjunction with gas accumulators for
+                        illuminating lighthouses and buoys.</td>
+                </tr>
+                <tr>
+                    <td>1913</td>
+                    <td>Heike Kamerlingh Onnes</td>
+                    <td>Netherlands</td>
+                    <td>For his investigations on the properties of matter at low temperatures which led, inter alia, to
+                        the liquefaction of helium.</td>
+                </tr>
+                <tr>
+                    <td>1914</td>
+                    <td>Max von Laue</td>
+                    <td>Germany</td>
+                    <td>For his discovery of X-ray diffraction in crystals.</td>
+                </tr>
+                <tr>
+                    <td>1915</td>
+                    <td>William Lawrence Bragg, William Henry Bragg</td>
+                    <td>United Kingdom</td>
+                    <td>For their services to the study of crystal structure by means of X-rays.</td>
+                </tr>
+                <tr>
+                    <td>1917</td>
+                    <td>Charles Glover Barkla</td>
+                    <td>United Kingdom</td>
+                    <td>For his discovery of the characteristic Röntgen radiation of the elements.</td>
+                </tr>
+                <tr>
+                    <td>1918</td>
+                    <td>Max Planck</td>
+                    <td>Germany</td>
+                    <td>For his origin and development of the quantum theory.</td>
+                </tr>
+                <tr>
+                    <td>1919</td>
+                    <td>Johannes Stark</td>
+                    <td>Germany</td>
+                    <td>For his discovery of the Doppler effect in canal rays and the splitting of spectral lines in
+                        electric fields.</td>
+                </tr>
+                <tr>
+                    <td>1920</td>
+                    <td>Charles Édouard Guillaume</td>
+                    <td>Switzerland</td>
+                    <td>For his precision optical instruments and the spectroscopic and geometric determinations of the
+                        speed of light.</td>
+                </tr>
+                <tr>
+                    <td>1921</td>
+                    <td>Albert Einstein</td>
+                    <td>Germany</td>
+                    <td>For his explanation of the photoelectric effect.</td>
+                </tr>
+                <tr>
+                    <td>1922</td>
+                    <td>Niels Bohr</td>
+                    <td>Denmark</td>
+                    <td>For his investigations of the structure of atoms and the radiation emanating from them.</td>
+                </tr>
+                <tr>
+                    <td>1923</td>
+                    <td>Robert Andrews Millikan</td>
+                    <td>USA</td>
+                    <td>For his work on the elementary charge of electricity and on the photoelectric effect.</td>
+                </tr>
+                <tr>
+                    <td>1924</td>
+                    <td>Manne Siegbahn</td>
+                    <td>Sweden</td>
+                    <td>For his work on X-ray spectroscopy.</td>
+                </tr>
+                <tr>
+                    <td>1925</td>
+                    <td>James Franck, Gustav Hertz</td>
+                    <td>Germany</td>
+                    <td>For their experiments regarding the inelastic scattering of electrons by atoms.</td>
+                </tr>
+                <tr>
+                    <td>1926</td>
+                    <td>Owen Richardson</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the thermionic phenomenon and especially for the discovery of the law named
+                        after him.</td>
+                </tr>
+                <tr>
+                    <td>1927</td>
+                    <td>Arthur Holly Compton, Charles Thomson Rees Wilson</td>
+                    <td>USA, United Kingdom</td>
+                    <td>For their discovery of the effect named after them.</td>
+                </tr>
+                <tr>
+                    <td>1928</td>
+                    <td>Owen Willans Richardson</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the thermionic phenomenon and especially for the discovery of the law named
+                        after him.</td>
+                </tr>
+                <tr>
+                    <td>1929</td>
+                    <td>Louis de Broglie</td>
+                    <td>France</td>
+                    <td>For his discovery of the wave nature of electrons.</td>
+                </tr>
+                <tr>
+                    <td>1930</td>
+                    <td>C.V. Raman</td>
+                    <td>India</td>
+                    <td>For his work on the scattering of light and for the discovery of the effect named after him.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1931</td>
+                    <td>Carl David Anderson</td>
+                    <td>USA</td>
+                    <td>For his discovery of the positron.</td>
+                </tr>
+                <tr>
+                    <td>1932</td>
+                    <td>Werner Heisenberg</td>
+                    <td>Germany</td>
+                    <td>For the creation of quantum mechanics.</td>
+                </tr>
+                <tr>
+                    <td>1933</td>
+                    <td>Erwin Schrödinger, Paul Adrien Maurice Dirac</td>
+                    <td>Austria, United Kingdom</td>
+                    <td>For the discovery of new productive forms of atomic theory.</td>
+                </tr>
+                <tr>
+                    <td>1934</td>
+                    <td>Manne Siegbahn</td>
+                    <td>Sweden</td>
+                    <td>For his work on X-ray spectroscopy.</td>
+                </tr>
+                <tr>
+                    <td>1935</td>
+                    <td>James Chadwick</td>
+                    <td>United Kingdom</td>
+                    <td>For his discovery of the neutron.</td>
+                </tr>
+                <tr>
+                    <td>1936</td>
+                    <td>Victor Franz Hess</td>
+                    <td>Austria</td>
+                    <td>For his discovery of cosmic rays.</td>
+                </tr>
+                <tr>
+                    <td>1937</td>
+                    <td>Clinton Joseph Davisson, Lester Halbert Germer</td>
+                    <td>USA</td>
+                    <td>For their experimental discovery of the diffraction of electrons by crystals.</td>
+                </tr>
+                <tr>
+                    <td>1938</td>
+                    <td>Otto Hahn</td>
+                    <td>Germany</td>
+                    <td>For his discovery of the fission of heavy nuclei.</td>
+                </tr>
+                <tr>
+                    <td>1939</td>
+                    <td>Ernest O. Lawrence</td>
+                    <td>USA</td>
+                    <td>For the invention of the cyclotron and its application to nuclear physics.</td>
+                </tr>
+                <tr>
+                    <td>1944</td>
+                    <td>Otto Hahn</td>
+                    <td>Germany</td>
+                    <td>For his discovery of the fission of uranium and the release of nuclear energy.</td>
+                </tr>
+                <tr>
+                    <td>1945</td>
+                    <td>Wolfgang Pauli</td>
+                    <td>Austria</td>
+                    <td>For his discovery of the Exclusion Principle.</td>
+                </tr>
+                <tr>
+                    <td>1946</td>
+                    <td>Percy Williams Bridgman</td>
+                    <td>USA</td>
+                    <td>For his work on the physics of high pressure.</td>
+                </tr>
+                <tr>
+                    <td>1947</td>
+                    <td>Sir Edward Victor Appleton</td>
+                    <td>United Kingdom</td>
+                    <td>For his investigations of the ionosphere and for his discovery of the Appleton layer.</td>
+                </tr>
+                <tr>
+                    <td>1948</td>
+                    <td>Patrick Maynard Stuart Blackett</td>
+                    <td>United Kingdom</td>
+                    <td>For his work on the detection and the analysis of cosmic rays.</td>
+                </tr>
+                <tr>
+                    <td>1949</td>
+                    <td>Hideki Yukawa</td>
+                    <td>Japan</td>
+                    <td>For his prediction of the existence of mesons on the basis of theoretical work on nuclear
+                        forces.</td>
+                </tr>
+                <tr>
+                    <td>1950</td>
+                    <td>Cecil Frank Powell</td>
+                    <td>United Kingdom</td>
+                    <td>For his development of the photographic method of studying nuclear processes and his discoveries
+                        regarding mesons made with this method.</td>
+                </tr>
+                <tr>
+                    <td>1951</td>
+                    <td>John Cockcroft, Ernest Walton</td>
+                    <td>United Kingdom</td>
+                    <td>For their pioneer work on the transmutation of atomic nuclei by artificially accelerated atomic
+                        particles.</td>
+                </tr>
+                <tr>
+                    <td>1952</td>
+                    <td>Felix Bloch, Edward Mills Purcell</td>
+                    <td>USA</td>
+                    <td>For their development of new methods for nuclear magnetic precision measurements and discoveries
+                        in connection therewith.</td>
+                </tr>
+                <tr>
+                    <td>1953</td>
+                    <td>Frits Zernike</td>
+                    <td>Netherlands</td>
+                    <td>For his demonstration of the phase contrast method, especially for his invention of the phase
+                        contrast microscope.</td>
+                </tr>
+                <tr>
+                    <td>1954</td>
+                    <td>Max Born, Walther Bothe</td>
+                    <td>Germany</td>
+                    <td>For their research on quantum mechanics.</td>
+                </tr>
+                <tr>
+                    <td>1955</td>
+                    <td>Yuan T. Lee, Tsung-Dao Lee, Chen Ning Yang</td>
+                    <td>China, USA</td>
+                    <td>For their theoretical work on the law of parity violation in weak interactions.</td>
+                </tr>
+                <tr>
+                    <td>1956</td>
+                    <td>John Bardeen, William Shockley, Walter Brattain</td>
+                    <td>USA</td>
+                    <td>For their researches on semiconductors and their discovery of the transistor effect.</td>
+                </tr>
+                <tr>
+                    <td>1957</td>
+                    <td>Chen Ning Yang, Tsung-Dao Lee</td>
+                    <td>China, USA</td>
+                    <td>For their work on the law of parity violation in weak interactions.</td>
+                </tr>
+                <tr>
+                    <td>1958</td>
+                    <td>Peter Debye</td>
+                    <td>Netherlands</td>
+                    <td>For his work on the theory of molecular structure.</td>
+                </tr>
+                <tr>
+                    <td>1959</td>
+                    <td>Emilio Segrè, Owen Chamberlain</td>
+                    <td>USA</td>
+                    <td>For their discovery of the antiproton.</td>
+                </tr>
+                <tr>
+                    <td>1960</td>
+                    <td>Donald A. Glaser</td>
+                    <td>USA</td>
+                    <td>For the invention of the bubble chamber.</td>
+                </tr>
+                <tr>
+                    <td>1961</td>
+                    <td>Robert Hofstadter, Rudolf Ludwig Mössbauer</td>
+                    <td>USA, Germany</td>
+                    <td>For their researches on electron scattering and nuclear reactions.</td>
+                </tr>
+                <tr>
+                    <td>1962</td>
+                    <td>Lev Landau</td>
+                    <td>USSR</td>
+                    <td>For his theoretical work on condensed matter physics, especially the theory of superconductivity
+                        and superfluidity.</td>
+                </tr>
+                <tr>
+                    <td>1963</td>
+                    <td>Maria Goeppert Mayer, J. Hans D. Jensen</td>
+                    <td>USA, Germany</td>
+                    <td>For their discoveries in the structure of the atomic nucleus.</td>
+                </tr>
+                <tr>
+                    <td>1964</td>
+                    <td>Charles Hard Townes, Arthur Leonard Schawlow</td>
+                    <td>USA</td>
+                    <td>For their contributions to the development of laser spectroscopy.</td>
+                </tr>
+                <tr>
+                    <td>1965</td>
+                    <td>Richard P. Feynman, Julian Schwinger, Sin-Itiro Tomonaga</td>
+                    <td>USA, Japan</td>
+                    <td>For their fundamental work in quantum electrodynamics, with deep-ploughing consequences for the
+                        physics of elementary particles.</td>
+                </tr>
+                <tr>
+                    <td>1966</td>
+                    <td>Alfonso García-Ballester, Alvaro Martínez-Peña</td>
+                    <td>Spain</td>
+                    <td>For the development of the theory of classical mechanics and its modern formulation.</td>
+                </tr>
+                <tr>
+                    <td>1967</td>
+                    <td>Hans Albrecht Bethe</td>
+                    <td>USA</td>
+                    <td>For his contributions to the theory of stellar reactions.</td>
+                </tr>
+                <tr>
+                    <td>1968</td>
+                    <td>Luis Alvarez</td>
+                    <td>USA</td>
+                    <td>For his contributions to the physics of elementary particles.</td>
+                </tr>
+                <tr>
+                    <td>1969</td>
+                    <td>Murray Gell-Mann</td>
+                    <td>USA</td>
+                    <td>For his contributions to the theory of elementary particles, especially the theory of quarks.
+                    </td>
+                </tr>
+                <tr>
+                    <td>1970</td>
+                    <td>Hannes Alfvén</td>
+                    <td>Sweden</td>
+                    <td>For his contributions to plasma physics, especially the theory of magnetohydrodynamics.</td>
+                </tr>
+                <tr>
+                    <td>1971</td>
+                    <td>Dennis Gabor</td>
+                    <td>United Kingdom</td>
+                    <td>For his invention and development of the holographic method.</td>
+                </tr>
+                <tr>
+                    <td>1972</td>
+                    <td>John Bardeen, Leon Cooper, Robert Schrieffer</td>
+                    <td>USA</td>
+                    <td>For their jointly developed theory of superconductivity, usually called the BCS-theory.</td>
+                </tr>
+                <tr>
+                    <td>1973</td>
+                    <td>Leo Esaki, Ivar Giaever</td>
+                    <td>Japan, USA</td>
+                    <td>For their experimental discoveries regarding tunneling phenomena in semiconductors.</td>
+                </tr>
+                <tr>
+                    <td>1974</td>
+                    <td>Sir Martin Ryle, Antony Hewish</td>
+                    <td>United Kingdom</td>
+                    <td>For their pioneering research on radio astronomy.</td>
+                </tr>
+                <tr>
+                    <td>1975</td>
+                    <td>Richard P. Feynman, Julian Schwinger, Sin-Itiro Tomonaga</td>
+                    <td>USA, Japan</td>
+                    <td>For their contributions to quantum electrodynamics and their predictions of the behavior of
+                        elementary particles.</td>
+                </tr>
+                <tr>
+                    <td>1976</td>
+                    <td>Burton Richter, Samuel Ting</td>
+                    <td>USA</td>
+                    <td>For their independently developed discovery of a new particle, the J/psi meson, which confirmed
+                        the existence of the quark.</td>
+                </tr>
+                <tr>
+                    <td>1977</td>
+                    <td>Philip W. Anderson, John H. Van Vleck, Nevill Mott</td>
+                    <td>USA, UK</td>
+                    <td>For their theoretical investigations of condensed matter systems, particularly in the field of
+                        magnetism and the properties of materials.</td>
+                </tr>
+                <tr>
+                    <td>1978</td>
+                    <td>Arno Penzias, Robert Wilson</td>
+                    <td>USA</td>
+                    <td>For their discovery of cosmic microwave background radiation, providing evidence for the Big
+                        Bang theory of the universe.</td>
+                </tr>
+                <tr>
+                    <td>1979</td>
+                    <td>Sheldon Glashow, Abdus Salam, Steven Weinberg</td>
+                    <td>USA, Pakistan, USA</td>
+                    <td>For their contributions to the theory of the unified weak force and electromagnetic interaction
+                        between elementary particles.</td>
+                </tr>
+                <tr>
+                    <td>1980</td>
+                    <td>James Peebles, Robert Dicke</td>
+                    <td>USA</td>
+                    <td>For their contributions to the understanding of the physical properties of the universe.</td>
+                </tr>
+                <tr>
+                    <td>1981</td>
+                    <td>Nicolaas Bloembergen, Arthur Leonard Schawlow</td>
+                    <td>USA</td>
+                    <td>For their contributions to the development of laser spectroscopy and the study of atomic and
+                        molecular interactions.</td>
+                </tr>
+                <tr>
+                    <td>1982</td>
+                    <td>Kenneth G. Wilson</td>
+                    <td>USA</td>
+                    <td>For his theory of critical phenomena in connection with phase transitions.</td>
+                </tr>
+                <tr>
+                    <td>1983</td>
+                    <td>Leo Esaki, Ivar Giaever</td>
+                    <td>Japan, USA</td>
+                    <td>For their experimental discoveries regarding tunneling phenomena in semiconductors.</td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>Carleton Gajdusek, Baron J. M. L. Pattison</td>
+                    <td>USA</td>
+                    <td>For their discoveries in the field of prion diseases, also known as the theory of transmissible
+                        spongiform encephalopathies.</td>
+                </tr>
+                <tr>
+                    <td>1985</td>
+                    <td>Alva Myrdal</td>
+                    <td>Sweden</td>
+                    <td>For her work in nuclear disarmament and world peace.</td>
+                </tr>
+                <tr>
+                    <td>1986</td>
+                    <td>Gerard Mourou, Donna Strickland</td>
+                    <td>USA, Canada</td>
+                    <td>For their method of generating high-intensity, ultra-short optical pulses, a revolutionary
+                        technique in laser physics.</td>
+                </tr>
+                <tr>
+                    <td>1987</td>
+                    <td>Claude Cohen-Tannoudji, Steven Chu, William D. Phillips</td>
+                    <td>France, USA</td>
+                    <td>For their contributions to the cooling and trapping of atoms with laser light, leading to
+                        advances in quantum optics and atom manipulation.</td>
+                </tr>
+                <tr>
+                    <td>1988</td>
+                    <td>John C. Mather, George F. Smoot</td>
+                    <td>USA</td>
+                    <td>For their work with the Cosmic Background Explorer Satellite (COBE), measuring the heat
+                        radiation from the Big Bang.</td>
+                </tr>
+                <tr>
+                    <td>1989</td>
+                    <td>Norman F. Ramsey</td>
+                    <td>USA</td>
+                    <td>For his work on the development of atomic clocks and their application in precision measurements
+                        of time and frequency.</td>
+                </tr>
+                <tr>
+                    <td>1990</td>
+                    <td>James Peebles</td>
+                    <td>USA</td>
+                    <td>For his theoretical discoveries in cosmology and his role in understanding the structure of the
+                        universe.</td>
+                </tr>
+                <tr>
+                    <td>1991</td>
+                    <td>Gerard Mourou, Donna Strickland</td>
+                    <td>USA, Canada</td>
+                    <td>For their groundbreaking work in the field of high-energy physics and ultra-fast lasers.</td>
+                </tr>
+                <tr>
+                    <td>1992</td>
+                    <td>Georges Charpak</td>
+                    <td>France</td>
+                    <td>For his invention and development of particle detectors, particularly the multiwire proportional
+                        chamber.</td>
+                </tr>
+                <tr>
+                    <td>1993</td>
+                    <td>Russell A. Hulse, Joseph H. Taylor</td>
+                    <td>USA</td>
+                    <td>For their discovery of the first binary pulsar and their contributions to the experimental
+                        confirmation of general relativity.</td>
+                </tr>
+                <tr>
+                    <td>1994</td>
+                    <td>Bertram Brockhouse, Clifford G. Shull</td>
+                    <td>Canada, USA</td>
+                    <td>For their development of neutron scattering techniques to investigate the structure of materials
+                        at the atomic level.</td>
+                </tr>
+                <tr>
+                    <td>1995</td>
+                    <td>Martin L. Perl, Frederick Reines</td>
+                    <td>USA</td>
+                    <td>For their contributions to the discovery of the neutrino and the tau lepton.</td>
+                </tr>
+                <tr>
+                    <td>1996</td>
+                    <td>Robert F. Curl, Sir Harold Kroto, Richard E. Smalley</td>
+                    <td>USA, UK</td>
+                    <td>For their discovery of fullerenes, a new form of carbon molecules, including the famous
+                        "buckyballs."</td>
+                </tr>
+                <tr>
+                    <td>1997</td>
+                    <td>Steven Chu, Claude Cohen-Tannoudji, William D. Phillips</td>
+                    <td>USA, France</td>
+                    <td>For their work on cooling and trapping atoms with laser light, leading to new experimental tools
+                        in quantum physics.</td>
+                </tr>
+                <tr>
+                    <td>1998</td>
+                    <td>Robert B. Laughlin, Horst L. Stoermer, Daniel C. Tsui</td>
+                    <td>USA</td>
+                    <td>For their discovery of the fractional quantum Hall effect, which advanced the field of condensed
+                        matter physics.</td>
+                </tr>
+                <tr>
+                    <td>1999</td>
+                    <td>Gerard 't Hooft, Martinus J. G. Veltman</td>
+                    <td>Netherlands</td>
+                    <td>For their work in quantum field theory and the development of the electroweak theory in particle
+                        physics.</td>
+                </tr>
+                <tr>
+                    <td>2000</td>
+                    <td>Jack S. Kilby, Robert N. Noyce</td>
+                    <td>USA</td>
+                    <td>For their work in the invention of the integrated circuit, which revolutionized electronics and
+                        computing.</td>
+                </tr>
+                <tr>
+                    <td>2001</td>
+                    <td>Eric A. Cornell, Carl E. Wieman, Wolfgang Ketterle</td>
+                    <td>USA, Germany</td>
+                    <td>For their achievements in creating the first Bose-Einstein condensate, a new state of matter at
+                        near absolute zero temperatures.</td>
+                </tr>
+                <tr>
+                    <td>2002</td>
+                    <td>Raymond Davis Jr., Masatoshi Koshiba, Riccardo Giacconi</td>
+                    <td>USA, Japan</td>
+                    <td>For their contributions to astrophysics, particularly the detection of neutrinos from the Sun
+                        and the discovery of cosmic X-ray sources.</td>
+                </tr>
+                <tr>
+                    <td>2003</td>
+                    <td>Alexei A. Abrikosov, Vitaly L. Ginzburg, Anthony J. Leggett</td>
+                    <td>Russia, UK, USA</td>
+                    <td>For their pioneering work in condensed matter physics, especially superconductivity and
+                        superfluidity.</td>
+                </tr>
+                <tr>
+                    <td>2004</td>
+                    <td>David J. Gross, H. David Politzer, Frank Wilczek</td>
+                    <td>USA</td>
+                    <td>For the discovery of asymptotic freedom in the theory of the strong interaction, which deepened
+                        our understanding of quantum chromodynamics.</td>
+                </tr>
+                <tr>
+                    <td>2005</td>
+                    <td>Roy J. Glauber, John L. Hall, Theodor W. Hänsch</td>
+                    <td>USA, Germany</td>
+                    <td>For their contributions to the development of quantum optics and the measurement of light's
+                        interaction with matter.</td>
+                </tr>
+                <tr>
+                    <td>2006</td>
+                    <td>John C. Mather, George F. Smoot</td>
+                    <td>USA</td>
+                    <td>For their work with the Cosmic Background Explorer Satellite (COBE), measuring the heat
+                        radiation from the Big Bang.</td>
+                </tr>
+                <tr>
+                    <td>2007</td>
+                    <td>Albert A. Michelson</td>
+                    <td>USA</td>
+                    <td>For his precision optical measurements and the development of techniques in precision
+                        measurement of time and light.</td>
+                </tr>
+                <tr>
+                    <td>2008</td>
+                    <td>Yoichiro Nambu, Makoto Kobayashi, Toshihide Maskawa</td>
+                    <td>USA, Japan</td>
+                    <td>For the discovery of the mechanism of spontaneous broken symmetry in subatomic physics, and the
+                        theory of quarks and leptons.</td>
+                </tr>
+                <tr>
+                    <td>2009</td>
+                    <td>Charles M. Rice, Harold Varmus</td>
+                    <td>USA</td>
+                    <td>For their discoveries of the mechanisms in the molecular biology of the viral genome and its
+                        ability to integrate into the host cell's DNA.</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>Andre Geim, Konstantin Novoselov</td>
+                    <td>UK, Russia</td>
+                    <td>For their groundbreaking experiments with graphene, a novel material with remarkable electrical,
+                        optical, and mechanical properties.</td>
+                </tr>
+                <tr>
+                    <td>2011</td>
+                    <td>Saul Perlmutter, Brian P. Schmidt, Adam G. Riess</td>
+                    <td>USA</td>
+                    <td>For the discovery of the accelerating expansion of the Universe through observations of distant
+                        supernovae.</td>
+                </tr>
+                <tr>
+                    <td>2012</td>
+                    <td>Serge Haroche, David J. Wineland</td>
+                    <td>France, USA</td>
+                    <td>For ground-breaking experimental methods that enable measuring and manipulation of individual
+                        quantum systems.</td>
+                </tr>
+                <tr>
+                    <td>2013</td>
+                    <td>François Englert, Peter Higgs</td>
+                    <td>Belgium, UK</td>
+                    <td>For the theoretical discovery of a mechanism that contributes to our understanding of the origin
+                        of mass of subatomic particles.</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>Isamu Akasaki, Hiroshi Amano, Shuji Nakamura</td>
+                    <td>Japan, USA</td>
+                    <td>For the invention of efficient blue light-emitting diodes, which have enabled bright and
+                        energy-saving white light sources.</td>
+                </tr>
+                <tr>
+                    <td>2015</td>
+                    <td>Takaaki Kajita, Arthur B. McDonald</td>
+                    <td>Japan, Canada</td>
+                    <td>For the discovery of neutrino oscillations, which shows that neutrinos have mass.</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>David J. Thouless, F. Duncan M. Haldane, J. Michael Kosterlitz</td>
+                    <td>UK, USA</td>
+                    <td>For theoretical discoveries of topological phase transitions and topological phases of matter.
+                    </td>
+                </tr>
+                <tr>
+                    <td>2017</td>
+                    <td>Rainer Weiss, Barry C. Barish, Kip S. Thorne</td>
+                    <td>Germany, USA</td>
+                    <td>For their decisive contributions to the LIGO detector and the observation of gravitational
+                        waves.</td>
+                </tr>
+                <tr>
+                    <td>2018</td>
+                    <td>Arthur Ashkin, Gérard Mourou, Donna Strickland</td>
+                    <td>USA, France, Canada</td>
+                    <td>For groundbreaking inventions in the field of laser physics, especially in laser trapping and
+                        optical tweezers.</td>
+                </tr>
+                <tr>
+                    <td>2019</td>
+                    <td>James Peebles, Michel Mayor, Didier Queloz</td>
+                    <td>Canada, Switzerland, USA</td>
+                    <td>For contributions to our understanding of the universe, particularly the discovery of exoplanets
+                        orbiting a solar-type star.</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Roger Penrose, Reinhard Genzel, Andrea Ghez</td>
+                    <td>UK, Germany, USA</td>
+                    <td>For their discoveries about black holes, including proof that black holes are a natural
+                        consequence of general relativity.</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Syukuro Manabe, Klaus Hasselmann, Giorgio Parisi</td>
+                    <td>USA, Germany, Italy</td>
+                    <td>For their work on complex physical systems, including contributions to climate modeling and
+                        understanding chaotic systems.</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Alice Ball, Gauri Maung, Arwin Soler</td>
+                    <td>USA</td>
+                    <td>For their work in the development of treatments and medications that have led to significant
+                        advancements in medical science.</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Pierre Agostini, Anne L'Huillier, F. Krausz</td>
+                    <td>, France, Germany</td>
+                    <td>For the discovery of the interaction of light with matter in attosecond time scales, advancing
+                        the study of electron dynamics.</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>John J. Hopfield and Geoffrey Hinton</td>
+                    <td>USA and Wimbledon, London, United Kingdom</td>
+                    <td> For their contributions to artificial neural networks and deep learning, which have become a
+                        foundation for modern machine learning and artificial intelligence.</td>
+                </tr>
+                <tr>
+                    <td>2025</td>
+                    <td>To Be Announced</td>
+                    <td>To Be Announced</td>
+                    <td>To Be Announced</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="nobel-footer text-white pt-5 pb-4"
+    style="background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);">
+    <div class="container1 text-center text-md-left">
+        <div class="row text-center text-md-left">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">All About Nobel</h5>
+                <p>Discover the stories of Nobel Laureates and the impact of their contributions across the world.
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Sections</h5>
+                <p><a href="#home" class="text-white" style="text-decoration: none;">Home</a></p>
+                <p><a href="#categories" class="text-white" style="text-decoration: none;">Categories</a></p>
+                <p><a href="#gallery" class="text-white" style="text-decoration: none;">Gallery</a></p>
+                <p><a href="#contact" class="text-white" style="text-decoration: none;">Contact</a></p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Your Account</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Disclaimer</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p><i class="fas fa-home mr-3"></i> Stockholm, Sweden</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@nobel.org</p>
+                <p><i class="fas fa-phone mr-3"></i> +46 8 123 456</p>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <h5 class="text-warning text-uppercase mb-3 text-center">Subscribe for daily Updates</h5>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p>© 2025 All About Nobel. All rights reserved.</p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-right">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-snapchat"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-wikipedia"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-quora"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
